@@ -11,7 +11,7 @@ Users will be able to add, delete, view, and edit tasks/subtasks. These edits, r
 The program will be interacted through a CLI.
 
 ## Class Diagram
- Link to class diagram [here] (https://app.moqups.com/HLxRWlfaIpcROvGcueaSVdEqONtGUJtv/view/page/aa458c046). 
+ Link to class diagram [here](https://app.moqups.com/HLxRWlfaIpcROvGcueaSVdEqONtGUJtv/view/page/aa458c046). 
  
  > ## Phase III
  > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on week 8 during lab time.

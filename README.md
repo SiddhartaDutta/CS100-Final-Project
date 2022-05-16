@@ -43,9 +43,9 @@ GetStartTime() returns the start time of the task.
 GetEndTime() returns the end time of the task.
 GetSubTasks() returns the sub tasks of the task.
  
-The design patterns we chose are the factory method and the strategy pattern. We chose the factory method because of the ease with which it would allow client-side updates. With the factory method, we can update our "library classes" (the parent class and task type subclasses) as we see fit at any given point in time. Since we do not want the client to have to learn a new way to create tasks. By separating the creation of the task object from the client class we can create updates for the parent and subclasses while allowing for the client class to no longer require recompilation. Recompilation will only be required for the library classes and the factory method. We also decided to use the strategy patten because it would allow us to use different algorithms for each task subclass type. This would allow us to organize our code much more neatly into strategies of operations. This way, 
-
 The design patterns we chose include the following:
+
+Composite: We chose to use composite to allow us to create and add new types of tasks easily. By making the abstraction prescribed by this pattern, we can quickly and easily add additional task subtypes. It also allows the user to have a consistent syntax when dealing with multiple types of subtasks. This helps us write better code as we do not have to update client-side code every time a new subclass is created and thus enables us to better organize the code.
 
  
  > ## Final deliverable

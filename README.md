@@ -41,21 +41,9 @@ GetStartTime() returns the start time of the task.
 GetEndTime() returns the end time of the task.
 GetSubTasks() returns the sub tasks of the task.
  
- > ## Phase III
- > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on week 8 during lab time.
- > * Before the meeting you should perform a sprint plan like you did in Phase II.
- > * You should also update this README file by adding the following:
- >   * What design pattern(s) did you use? For each pattern you must explain in 4-5 sentences:
- >     * Why did you pick this pattern? And what feature did you implement with it?
- >     * How did the design pattern help you write better code?
- >   * An updated class diagram that reflects the design pattern(s) you used. You may combine multiple design patterns into one diagram if you'd like, but it needs to be clear which portion of the diagram represents which design pattern (either in the diagram or in the description).
- >   * Make sure your README file (and Project board) are up-to-date reflecting the current status of your project. Previous versions of the README file should still be visible through your commit history.
-> 
-> During the meeting with your reader you will discuss: 
- > * How effective your last sprint was (each member should talk about what they did)
- > * Any tasks that did not get completed last sprint, and how you took them into consideration for this sprint
- > * Any bugs you've identified and created issues for during the sprint. Do you plan on fixing them in the next sprint or are they lower priority?
- > * What tasks you are planning for this next sprint.
+The design patterns we chose are the factory method and the strategy pattern. We chose the factory method because of the ease with which it would allow client-side updates. With the factory method, we can update our "library classes" (the parent class and task type subclasses) as we see fit at any given point in time. Since we do not want the client to have to learn a new way to create tasks. By separating the creation of the task object from the client class we can create updates for the parent and subclasses while allowing for the client class to no longer require recompilation. Recompilation will only be required for the library classes and the factory method. We also decided to use the strategy patten because it would allow us to use different algorithms for each task subclass type. This would allow us to organize our code much more neatly into strategies of operations. This way, 
+
+The design patterns we chose include the following:
 
  
  > ## Final deliverable

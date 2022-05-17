@@ -13,41 +13,52 @@ The program will be interacted through a CLI.
 ## Class Diagram
  Link to class diagram [here](https://app.moqups.com/HLxRWlfaIpcROvGcueaSVdEqONtGUJtv/view/page/aa458c046). 
 
- ![image of second version of class diagram](./images/decoders.png)
+ ![image of second version of class diagram](./images/IMG_2293.jpeg)
 
- For our program to work, we need 2 classes. The first class is called "TaskManager." This class has 3 private member variables, Tasks, OldLists, and Count. Tasks is a List of Task type that will hold all of the tasks to be recorded for the day. OldLists will always be updated to be a pervious version of Tasks prior to every Tasks update to allow users to revert changes once. Count holds the amount of primary tasks the list contains should the user want to know how many primary tasks remain. The public member functions allow the user to interact with this class to be able to create their own schedule:
-
-Add() allows the user to add tasks to the list of tasks. Delete() allows the user to delete a specified task. ViewAll() allows the user to view all scheduled tasks.
-ViewNext() allows the user to view the next scheduled task.
-ViewTitle() allows the user to search and view by a specified title.
-ViewByStartTime() allows the user to search and view tasks at a specified start time.
-ViewByEndTime() allows the user to search and view tasks at a specified end time.
-Edit() allows the user to edit a specified task.
-ViewByTag() allows the user to search and view tasks by a specified tag.
-ReverseLastEdit() allows the user to revert back one edit.
-
-The second class is the "Task" class and are the details of each task stored in "TaskManager." It has private member variables that include a title, description, tags, start time, end time, and subtasks. Each is self-explanatory save subtasks which is a list of tasks should the task have subtasks.
-
-The following are the public member functions of the class:
-
-EditTitle() allows the user to edit the title of the task. 
-EditDescription() allows the user to edit the description of the task.
-EditTags() allows the user to edit the tags of the task.
-EditStartTime() allows the user to edit the start time of the task.
-EditEndTime() allows the user to edit the end time of the task.
-EditSubTasks() allows the user to edit sub tasks.
-GetTitle() returns the title of the task.
-GetDescription() returns the description of the task.
-GetTags() returns the tags of the task.
-GetStartTime() returns the start time of the task.
-GetEndTime() returns the end time of the task.
-GetSubTasks() returns the sub tasks of the task.
- 
 The design patterns we chose include the following:
 
-- Composite: We chose to use composite to allow us to create and add new types of tasks easily. By making the abstraction prescribed by this pattern, we can quickly and easily add additional task subtypes. It also allows the user to have a consistent syntax when dealing with multiple types of subtasks. This helps us write better code as we do not have to update client-side code every time a new subclass is created and thus enables us to better organize the code.
+- Strategy: We chose to use strategy to allow us to create and add new types of tasks easily that all share common algorithms with differing implementations. By making the abstraction prescribed by this pattern, we can quickly and easily add additional task subtypes and the algorithms required. It also allows the user to have a consistent syntax when dealing with multiple types of subtasks. This helps us write better code as we do not have to update client-side code every time a new subclass is created and thus enables us to better organize the code.
 
- 
+For our program to work, we are using 6 classes. As denoted in the class diagram, the green are leaves for the strategy pattern with the orange acting as our base/parent class. The yellow section represents our client class which our main file will use to interact with the parent and subclass objects. The following describes all the core methods of the leaf classes:
+
+The design patterns we chose include the following:
+
+- Strategy: We chose to use strategy to allow us to create and add new types of tasks easily that all share common algorithms with differing implementations. By making the abstraction prescribed by this pattern, we can quickly and easily add additional task subtypes and the algorithms required. It also allows the user to have a consistent syntax when dealing with multiple types of subtasks. This helps us write better code as we do not have to update client-side code every time a new subclass is created and thus enables us to better organize the code.
+
+ For our program to work, we are using 6 classes. As denoted in the class diagram, the green are leaves for the strategy pattern with the orange acting as our base/parent class. The yellow section represents our client class which our main file will use to interact with the parent and subclass objects. The following describes all the core methods of the leaf classes:
+
+- PrintAllInfo() : Prints all member variable data
+- EditTitle() : Edits title of task
+- EditStartTime() : Edits start time of task
+- EditEndTime() : Edits end time of task
+- EditDate() : Edits date of task
+- EditLocation() : Edits location of task
+- EditSubTasks() : Edits subtasks
+- EditDescription() : Edits description of task
+- EditDueDate() : Edits task due date
+- EditDueTime() : Edits task due time
+- EditShoppingList() : Edits string list
+- GetTitle() : Returns task title
+- GetStartTime() : Returns task start time
+- GetEndTime() : Returns task end time
+- GetDate() : Returns task date
+- GetLocation() : Returns task location
+- GetSubTasks() : Returns subtask list
+- GetDescription() : Returns task description
+- GetDueDate() : Returns task due date
+- GetDueTime() : Returns task due time
+- GetShoppingList() : Returns task string list
+
+The following describes all the core methods of the client class:
+
+- PrintAllInfo() : Prints all member variable data
+- Add() : Add task
+- Delete() : Delete task
+- ViewNext() : View next task
+- ViewByTitle() : Search tasks by title
+- Edit() : Edit task
+- ReverseLastEdit() : Reverse last edit
+
  > ## Final deliverable
  > All group members will give a demo to the TA/reader during lab time. The TA/reader will check the demo and the project GitHub repository and ask a few questions to all the team members. 
  > Before the demo, you should do the following:

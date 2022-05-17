@@ -15,10 +15,50 @@ The program will be interacted through a CLI.
 
  ![image of second version of class diagram](./images/decoders.png)
 
+The design patterns we chose include the following:
 
+- Strategy: We chose to use strategy to allow us to create and add new types of tasks easily that all share common algorithms with differing implementations. By making the abstraction prescribed by this pattern, we can quickly and easily add additional task subtypes and the algorithms required. It also allows the user to have a consistent syntax when dealing with multiple types of subtasks. This helps us write better code as we do not have to update client-side code every time a new subclass is created and thus enables us to better organize the code.
 
+For our program to work, we are using 6 classes. As denoted in the class diagram, the green are leaves for the strategy pattern with the orange acting as our base/parent class. The yellow section represents our client class which our main file will use to interact with the parent and subclass objects. The following describes all the core methods of the leaf classes:
 
- 
+The design patterns we chose include the following:
+
+- Strategy: We chose to use strategy to allow us to create and add new types of tasks easily that all share common algorithms with differing implementations. By making the abstraction prescribed by this pattern, we can quickly and easily add additional task subtypes and the algorithms required. It also allows the user to have a consistent syntax when dealing with multiple types of subtasks. This helps us write better code as we do not have to update client-side code every time a new subclass is created and thus enables us to better organize the code.
+
+ For our program to work, we are using 6 classes. As denoted in the class diagram, the green are leaves for the strategy pattern with the orange acting as our base/parent class. The yellow section represents our client class which our main file will use to interact with the parent and subclass objects. The following describes all the core methods of the leaf classes:
+
+- PrintAllInfo() : Prints all member variable data
+- EditTitle() : Edits title of task
+- EditStartTime() : Edits start time of task
+- EditEndTime() : Edits end time of task
+- EditDate() : Edits date of task
+- EditLocation() : Edits location of task
+- EditSubTasks() : Edits subtasks
+- EditDescription() : Edits description of task
+- EditDueDate() : Edits task due date
+- EditDueTime() : Edits task due time
+- EditShoppingList() : Edits string list
+- GetTitle() : Returns task title
+- GetStartTime() : Returns task start time
+- GetEndTime() : Returns task end time
+- GetDate() : Returns task date
+- GetLocation() : Returns task location
+- GetSubTasks() : Returns subtask list
+- GetDescription() : Returns task description
+- GetDueDate() : Returns task due date
+- GetDueTime() : Returns task due time
+- GetShoppingList() : Returns task string list
+
+The following describes all the core methods of the client class:
+
+- PrintAllInfo() : Prints all member variable data
+- Add() : Add task
+- Delete() : Delete task
+- ViewNext() : View next task
+- ViewByTitle() : Search tasks by title
+- Edit() : Edit task
+- ReverseLastEdit() : Reverse last edit
+
  > ## Final deliverable
  > All group members will give a demo to the TA/reader during lab time. The TA/reader will check the demo and the project GitHub repository and ask a few questions to all the team members. 
  > Before the demo, you should do the following:

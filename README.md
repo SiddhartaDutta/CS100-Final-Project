@@ -13,7 +13,7 @@ The program will be interacted through a CLI.
 ## Class Diagram
  Link to class diagram [here](https://app.moqups.com/HLxRWlfaIpcROvGcueaSVdEqONtGUJtv/view/page/aa458c046). 
 
- ![image of second version of class diagram](./images/decoders.png)
+ ![image of second version of class diagram](./images/IMG_2293.jpeg)
 
 The design patterns we chose include the following:
 

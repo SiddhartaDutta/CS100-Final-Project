@@ -52,7 +52,28 @@ class Meetings : public ParentTask {
 	
 		}
 
+		/* MUTATORS */
+
+		/// Edits title of task
+		void EditTitle(String newTitle);
+
+		/// Edits start time of task
+		void EditStartTime(int hour, int minute);
+
+		/// Edits end time of task
+		void EditEndTime(int hour, int minute);
+
+		/// Edits date of task
+		void EditDate(int month, int day, int year);
+
+		/// Edits location of task
+		void EditLocation(String location);
+
 		
+
+		/* ACCESSORS */
+
+		String PrintAllInfo();
 
 };
 

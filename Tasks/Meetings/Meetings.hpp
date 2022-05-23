@@ -4,8 +4,8 @@
 #include <list>
 
 #include "../ParentTask.hpp"
-#include "../../TaskStructs/DateStruct.hpp"
-#include "../../TaskStructs/TimeStruct.hpp"
+#include "../../attributeClasses/Date.hpp"
+#include "../../attributeClasses/Time.hpp"
 
 using namespace std;
 
@@ -17,13 +17,13 @@ class Meetings : public ParentTask {
 		String title;
 		
 		// Date of task
-		date eventDate;
+		Date eventDate;
 
 		// Start time of task
-		time startTime;
+		Time startTime;
 
 		// End time of task
-		time endTime;
+		Time endTime;
 
 		// Location of task
 		String location;
@@ -38,17 +38,17 @@ class Meetings : public ParentTask {
 			
 			this->title = title;
 
-			this->eventDate.month = month;
-			this->eventDate.day = day;
-			this->eventDate.year = year;
+			this->eventDate.setMonth(month);
+			this->eventDate.setDay(day);
+			this->eventDate.setYear(year);
 
 			this->location = location;
 
-			this->startTime.hour = startTimeHour;
-			this->startTime.minute = startTimeMin;
+			this->startTime.setHour(startTimeHour);
+			this->startTime.setMinute(startTimeMinute);
 
-			this->endTime.hour = endTimeHour;
-			this->endTime.minute = endTimeMin;
+			this->endTime.setHour(endTimeHour);
+			this->endTime.setMinute(endTimeMinute);
 	
 		}
 

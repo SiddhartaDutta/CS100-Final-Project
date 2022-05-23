@@ -75,15 +75,15 @@ class Meetings : public ParentTask {
 
 		String PrintAllInfo();
 
-		void getTitle() const;
+		String getTitle() const;
 		
-		void getStartTime() const;
+		Time getStartTime() const;
 
-		void getEndTime() const;
+		Time getEndTime() const;
 
-		void getDate() const;
+		Date getDate() const;
 
-		void getLocation() const;
+		String getLocation() const;
 
 };
 

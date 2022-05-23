@@ -1,20 +1,22 @@
 #include <iostream>
-#include "Meetings.hpp"
+#include "Meeting.hpp"
 
 using namespace std;
 
 /* ACCESSORS */
 
-void Meetings::PrintAllInfo(){
+void Meeting::printAllInfo(){
 	cout << "test\n";
 }
 
-string Meetings::getTitle() const { return title; }
+void Meeting::editTask(){
+	cout <<"task edited\n";
+}
 
-Time Meetings::getStartTime() const { return startTime; }
+Time* Meeting::getStartTime() const { return startTime; }
 
-Time Meetings::getEndTime() const { return endTime; }
+Time* Meeting::getEndTime() const { return endTime; }
 
-Date Meetings::getDate() const { return eventDate; }
+Date* Meeting::getDate() const { return eventDate; }
 
-string Meetings::getLocation() const { return location; }
+string Meeting::getLocation() const { return location; }

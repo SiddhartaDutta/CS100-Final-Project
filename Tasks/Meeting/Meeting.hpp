@@ -1,7 +1,7 @@
 #ifndef __MEETINGS_HPP__
 #define __MEETINGS_HPP__
 
-#include <list>
+#include <vector>
 
 #include "../ParentTask.hpp"
 #include "../../attributeClasses/Date.hpp"
@@ -14,19 +14,19 @@ class Meeting : public ParentTask {
 	private:
 		
 		// Date of task
-		Date eventDate();
+		Date* eventDate;
 
 		// Start time of task
-		Time startTime();
+		Time* startTime;
 
 		// End time of task
-		Time endTime();
+		Time* endTime;
 
 		// Location of task
 		string location;
 
 		// Subtask list
-		list<ParentTask> subTasks;
+		vector<ParentTask*> subTasks;
 
 	public:
 
@@ -34,19 +34,18 @@ class Meeting : public ParentTask {
 		Meeting(string title, int month, int day, int year, string location, int startTimeHour, int startTimeMin, int endTimeHour, int endTimeMin) : ParentTask() {
 			
 			this->title = title;
-			type = Meeting;
 
-			this->eventDate.setMonth(month);
-			this->eventDate.setDay(day);
-			this->eventDate.setYear(year);
+			eventDate->setMonth(month);
+			eventDate->setDay(day);
+			eventDate->setYear(year);
 
 			this->location = location;
 
-			this->startTime.setHour(startTimeHour);
-			this->startTime.setMinute(startTimeMin);
+			startTime->setHour(startTimeHour);
+			startTime->setMinute(startTimeMin);
 
-			this->endTime.setHour(endTimeHour);
-			this->endTime.setMinute(endTimeMin);
+			endTime->setHour(endTimeHour);
+			endTime->setMinute(endTimeMin);
 	
 		}
 
@@ -62,13 +61,19 @@ class Meeting : public ParentTask {
 		void setDate(int month, int day, int year);
 
 		/// Edits location of task
-		void setLocation(string location);
+		void setLocation(std::string location);
 
 		
 
 		/* ACCESSORS */
 
-		void PrintAllInfo();
+		void printAllInfo();
+		void editTask();
+		
+		Time* getStartTime() const;
+		Time* getEndTime() const;
+		Date* getDate() const;
+		string getLocation() const;
 
 };
 

@@ -1,13 +1,10 @@
 #ifndef __PARENT_TASK__
 #define __PARENT_TASK__
 
-#include "TaskType.hpp"
-
 class ParentTask {
 
-	private:
-		string title;
-		TaskType type;			
+	protected:
+		std::string title;
 
 	public:
 
@@ -18,15 +15,14 @@ class ParentTask {
 		virtual ~ParentTask(){}
 
 		// Pure Virtual Functions
-		virtual void printAllInfo();
-
+		virtual void printAllInfo() = 0;
+		virtual void editTask() = 0;
+	
 		// Mutators
-		void setTitle(string title){ this-> title = title; }
-		void setTaskType(TaskType type){ this-> type = type; }
+		void setTitle(std::string title){ this-> title = title; }
 
 		// Accessors
-		string getTitle(){ return title; }
-		TaskType getTaskType(){ return type; }
+		std::string getTitle(){ return title; }
 
 };
 

@@ -6,9 +6,17 @@
 #include "../../Tasks/ParentTask.hpp"
 #include "../../Tasks/Meetings/Meetings.hpp"
 
+#include "../../attributeClasses/Date.hpp"
+
 TEST(MeetingConstructor, T1){
 
-	EXPECT_EQ(1,1);
+	ParentTask* test = new Meetings("New Meeting", 5, 22, 2022, UCR, 9, 20, 11, 59);
+
+	// Test title
+	EXPECT_EQ(test->getTitle(), "New Meeting");
+
+	// Test month
+	EXPECT_EQ(test->getDate()->getMonth(), 5);
 
 }
 

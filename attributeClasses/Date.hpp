@@ -9,6 +9,12 @@ class Date {
 		int year;
 
 	public:
+		Date(int month = 0, int day = 0, int year = 0){
+			this->month = month;
+			this->day = day;
+			this->year = year;
+		}
+
 		// Accessors
 		int getMonth() const { return month; }
 

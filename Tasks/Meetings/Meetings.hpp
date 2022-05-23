@@ -9,21 +9,18 @@
 
 using namespace std;
 
-class Meetings : public ParentTask {
+class Meeting : public ParentTask {
 
 	private:
-
-		// Title of task
-		string title;
 		
 		// Date of task
-		Date eventDate;
+		Date eventDate();
 
 		// Start time of task
-		Time startTime;
+		Time startTime();
 
 		// End time of task
-		Time endTime;
+		Time endTime();
 
 		// Location of task
 		string location;
@@ -34,9 +31,10 @@ class Meetings : public ParentTask {
 	public:
 
 		// Constructor
-		Meetings(string title, int month, int day, int year, string location, int startTimeHour, int startTimeMin, int endTimeHour, int endTimeMin) : ParentTask() {
+		Meeting(string title, int month, int day, int year, string location, int startTimeHour, int startTimeMin, int endTimeHour, int endTimeMin) : ParentTask() {
 			
 			this->title = title;
+			type = Meeting;
 
 			this->eventDate.setMonth(month);
 			this->eventDate.setDay(day);
@@ -53,9 +51,6 @@ class Meetings : public ParentTask {
 		}
 
 		/* MUTATORS */
-
-		/// Edits title of task
-		void setTitle(string newTitle);
 
 		/// Edits start time of task
 		void setStartTime(int hour, int minute);
@@ -74,16 +69,6 @@ class Meetings : public ParentTask {
 		/* ACCESSORS */
 
 		void PrintAllInfo();
-
-		string getTitle() const;
-		
-		Time getStartTime() const;
-
-		Time getEndTime() const;
-
-		Date getDate() const;
-
-		string getLocation() const;
 
 };
 

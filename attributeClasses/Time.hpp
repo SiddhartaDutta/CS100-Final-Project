@@ -8,6 +8,11 @@ class Time {
 		int minute;
 
 	public:
+		Time(int hour = 0, int minute = 0){
+			this->hour = hour;
+			this->minute = minute;
+		}
+	
 		// Accessors
 		int getHour() const { return hour; }
 

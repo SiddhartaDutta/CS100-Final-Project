@@ -14,7 +14,7 @@ class Meetings : public ParentTask {
 	private:
 
 		// Title of task
-		String title;
+		string title;
 		
 		// Date of task
 		Date eventDate;
@@ -26,7 +26,7 @@ class Meetings : public ParentTask {
 		Time endTime;
 
 		// Location of task
-		String location;
+		string location;
 
 		// Subtask list
 		list<ParentTask> subTasks;
@@ -34,7 +34,7 @@ class Meetings : public ParentTask {
 	public:
 
 		// Constructor
-		Meetings(String title, int month, int day, int year, String location, int startTimeHour, int startTimeMin, int endTimeHour, int endTimeMin) : ParentTask() {
+		Meetings(string title, int month, int day, int year, string location, int startTimeHour, int startTimeMin, int endTimeHour, int endTimeMin) : ParentTask() {
 			
 			this->title = title;
 
@@ -45,37 +45,37 @@ class Meetings : public ParentTask {
 			this->location = location;
 
 			this->startTime.setHour(startTimeHour);
-			this->startTime.setMinute(startTimeMinute);
+			this->startTime.setMinute(startTimeMin);
 
 			this->endTime.setHour(endTimeHour);
-			this->endTime.setMinute(endTimeMinute);
+			this->endTime.setMinute(endTimeMin);
 	
 		}
 
 		/* MUTATORS */
 
 		/// Edits title of task
-		void EditTitle(String newTitle);
+		void setTitle(string newTitle);
 
 		/// Edits start time of task
-		void EditStartTime(int hour, int minute);
+		void setStartTime(int hour, int minute);
 
 		/// Edits end time of task
-		void EditEndTime(int hour, int minute);
+		void setEndTime(int hour, int minute);
 
 		/// Edits date of task
-		void EditDate(int month, int day, int year);
+		void setDate(int month, int day, int year);
 
 		/// Edits location of task
-		void EditLocation(String location);
+		void setLocation(string location);
 
 		
 
 		/* ACCESSORS */
 
-		String PrintAllInfo();
+		void PrintAllInfo();
 
-		String getTitle() const;
+		string getTitle() const;
 		
 		Time getStartTime() const;
 
@@ -83,7 +83,7 @@ class Meetings : public ParentTask {
 
 		Date getDate() const;
 
-		String getLocation() const;
+		string getLocation() const;
 
 };
 

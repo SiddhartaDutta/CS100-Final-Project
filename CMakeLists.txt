@@ -6,7 +6,7 @@ ADD_SUBDIRECTORY(googletest)
 
 ADD_EXECUTABLE(test
 	unit_tests.cpp
-	Tasks/Meetings/Meetings.cpp
+	Tasks/Meeting/Meeting.cpp
 )
 
 

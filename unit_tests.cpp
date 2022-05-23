@@ -1,6 +1,6 @@
 #include "gtest/gtest.h"
 
-
+#include "unitTests/Meetings/meetings_construct.hpp"
 
 int main(int argc, char **argv){
 	::testing::InitGoogleTest(&argc, argv);

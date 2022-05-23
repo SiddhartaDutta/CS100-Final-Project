@@ -4,9 +4,10 @@ ADD_SUBDIRECTORY(googletest)
 
 
 
-ADD_EXECUTABLE(runTests
-	
+ADD_EXECUTABLE(test
+	unit_tests.cpp
 	Tasks/Meetings/Meetings.cpp
+)
 
 
 

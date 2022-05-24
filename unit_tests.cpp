@@ -11,6 +11,7 @@
 
 // Date Class Unit Tests
 #include "unitTests/Date/date_constructor_tests.hpp"
+#include "unitTests/Date/date_mutator_tests.hpp"
 
 // Time Class Unit Tests
 

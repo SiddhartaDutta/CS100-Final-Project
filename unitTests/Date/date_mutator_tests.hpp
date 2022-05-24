@@ -78,4 +78,41 @@ TEST(DateDayMutator, NegativeInput){
 
 }
 
+// YEAR TESTS
+TEST(DateYearMutator, ExpectedInput){
+
+        Date* test = new Date();
+
+        test->setYear(1);
+
+        EXPECT_EQ(test->getMonth(), 0);
+        EXPECT_EQ(test->getDay(), 0);
+        EXPECT_EQ(test->getYear(), 1);
+
+}
+
+TEST(DateYearMutator, ZeroInput){
+
+        Date* test = new Date(0, 0, 1);
+
+        test->setYear(0);
+
+        EXPECT_EQ(test->getMonth(), 0);
+        EXPECT_EQ(test->getDay(), 0);
+        EXPECT_EQ(test->getYear(), 0);
+
+}
+
+TEST(DateYearMutator, NegativeInput){
+
+        Date* test = new Date();
+
+        test->setYear(-1);
+
+        EXPECT_EQ(test->getMonth(), 0);
+        EXPECT_EQ(test->getDay(), 0);
+        EXPECT_EQ(test->getYear(), -1);
+
+}
+
 #endif

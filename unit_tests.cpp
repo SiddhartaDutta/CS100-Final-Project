@@ -14,7 +14,8 @@
 #include "unitTests/Date/date_mutator_tests.hpp"
 
 // Time Class Unit Tests
-
+#include "unitTests/Time/time_constructor_tests.hpp"
+#include "unitTests/Time/time_mutator_tests.hpp"
 
 int main(int argc, char **argv){
 	::testing::InitGoogleTest(&argc, argv);

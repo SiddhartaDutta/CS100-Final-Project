@@ -9,6 +9,11 @@ ADD_EXECUTABLE(test
 	Tasks/Meeting/Meeting.cpp
 )
 
+ADD_EXECUTABLE(main
+	main.cpp
+	Tasks/Meeting/Meeting.cpp
+)
+
 
 
 TARGET_LINK_LIBRARIES(test gtest)

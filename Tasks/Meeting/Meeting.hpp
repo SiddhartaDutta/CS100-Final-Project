@@ -31,19 +31,22 @@ class Meeting : public ParentTask {
 	public:
 
 		// Constructor
-		Meeting(string title, int month, int day, int year, string location, int startTimeHour, int startTimeMin, int endTimeHour, int endTimeMin) : ParentTask() {
+		Meeting(string title = "", int month = 0, int day = 0, int year = 0, string location = "", int startTimeHour = 0, int startTimeMin = 0, int endTimeHour = 0, int endTimeMin = 0) : ParentTask() {
 			
 			this->title = title;
-
+			
+			eventDate = new Date();
 			eventDate->setMonth(month);
 			eventDate->setDay(day);
 			eventDate->setYear(year);
 
 			this->location = location;
 
+			startTime = new Time();
 			startTime->setHour(startTimeHour);
 			startTime->setMinute(startTimeMin);
 
+			endTime = new Time();
 			endTime->setHour(endTimeHour);
 			endTime->setMinute(endTimeMin);
 	

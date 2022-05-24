@@ -39,4 +39,38 @@ TEST(TimeHourMutator, NegativeInput){
 
 }
 
+// MINUTE TESTS
+TEST(TimeMinuteMutator, ExpectedInput){
+
+	Time* test = new Time();
+
+	test->setMinute(1);
+
+	EXPECT_EQ(test->getHour(), 0);
+	EXPECT_EQ(test->getMinute(), 1);
+
+}
+
+TEST(TimeMinuteMutator, ZeroInput){
+
+        Time* test = new Time(0, 1);
+
+        test->setMinute(0);
+
+        EXPECT_EQ(test->getHour(), 0);
+        EXPECT_EQ(test->getMinute(), 0);
+
+}
+
+TEST(TimeMinuteMutator, NegativeInput){
+
+        Time* test = new Time();
+
+        test->setMinute(-1);
+
+        EXPECT_EQ(test->getHour(), 0);
+        EXPECT_EQ(test->getMinute(), -1);
+
+}
+
 #endif

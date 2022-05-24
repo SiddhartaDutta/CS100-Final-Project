@@ -66,12 +66,12 @@ class Meeting : public ParentTask {
 		/// Edits location of task
 		void setLocation(std::string location);
 
-		
+		/// Runs menu to edit all attributes : follows pattern for universal object manip
+		void editTask();
 
 		/* ACCESSORS */
 
 		void printAllInfo();
-		void editTask();
 		
 		Time* getStartTime() const;
 		Time* getEndTime() const;

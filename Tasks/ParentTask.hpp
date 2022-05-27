@@ -20,6 +20,7 @@ class ParentTask {
 	
 		// Mutators
 		void setTitle(std::string title){ this-> title = title; }
+		void operateSubTaskMenu();
 
 		// Accessors
 		std::string getTitle(){ return title; }

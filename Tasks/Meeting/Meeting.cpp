@@ -27,7 +27,7 @@ void Meeting::editTask(){
 	cout << "\n";
 
 	// Print menu
-	cout << "Options\n;
+	cout << "Options\n";
 	cout << "\t1. Edit Title\n";
 	cout << "\t2. Edit Date\n";
 	cout << "\t3. Edit Location\n";

@@ -24,11 +24,12 @@ class ParentTask {
 		virtual void editTask() = 0;
 	
 		// Mutators
-		void setTitle(std::string title){ this-> title = title; }
+		void setTitle(std::string title);
+		void setTitleFromMenu();
 		void operateSubTaskMenu();
 
 		// Accessors
-		std::string getTitle(){ return title; }
+		std::string getTitle();
 
 };
 

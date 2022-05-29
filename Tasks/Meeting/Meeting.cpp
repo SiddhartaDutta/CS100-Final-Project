@@ -1,6 +1,7 @@
+#include "Meeting.hpp"
+
 #include <string>
 #include <iostream>
-#include "Meeting.hpp"
 
 using namespace std;
 

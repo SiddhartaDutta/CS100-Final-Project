@@ -20,31 +20,31 @@ Date* Meeting::getDate() const { return eventDate; }
 string Meeting::getLocation() const { return location; }
 
 /* MUTATORS */
-void Meeting::editTask(){
-	cout << "Selected Task:\n\n";
+void Meeting::editTask(std::istream& input, std::ostream& output){
+	output << "Selected Task:\n\n";
 
 	// Print task
 	this->printAllInfo();
 
-	cout << "\n";
+	output << "\n";
 
 	// Print menu
-	cout << "Options\n";
-	cout << "\t1. Edit Title\n";
-	cout << "\t2. Edit Date\n";
-	cout << "\t3. Edit Location\n";
-	cout << "\t4. Edit Start Time\n";
-	cout << "\t5. Edit End Time\n";
-	cout << "\t6. Edit Subtasks\n";
+	output << "Options\n";
+	output << "\t1. Edit Title\n";
+	output << "\t2. Edit Date\n";
+	output << "\t3. Edit Location\n";
+	output << "\t4. Edit Start Time\n";
+	output << "\t5. Edit End Time\n";
+	output << "\t6. Edit Subtasks\n";
 
-	cout << "Please enter a number corresponding to the attribute you would like to edit: ";
+	output << "Please enter a number corresponding to the attribute you would like to edit: ";
 	
 	// Input + processing
 	try
 	{
-		string input;
-		cin >> input;
-		int selection = stoi(input);
+		string in;
+		input >> in;
+		int selection = stoi(in);
 
 		switch (selection){
 			case 1:
@@ -64,12 +64,12 @@ void Meeting::editTask(){
 		}
 	} 
 	catch (int i){
-		cout << " Error: Invalid selection with value: " << i << '\n';
-		cout << " Operation aborted.\n";
+		output << " Error: Invalid selection with value: " << i << '\n';
+		output << " Operation aborted.\n";
 	}
 	catch(...){
-		cout << " Error: Invalid input (non-numerical input).\n";
-		cout << " Operation aborted.\n";
+		output << " Error: Invalid input (non-numerical input).\n";
+		output << " Operation aborted.\n";
 	}
 	
 	

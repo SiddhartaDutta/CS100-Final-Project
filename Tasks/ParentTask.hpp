@@ -2,6 +2,7 @@
 #define __PARENT_TASK__
 
 #include <vector>
+#include <iostream>
 
 class ParentTask {
 
@@ -21,11 +22,11 @@ class ParentTask {
 
 		// Pure Virtual Functions
 		virtual void printAllInfo() = 0;
-		virtual void editTask() = 0;
+		virtual void editTask(std::istream& input, std::ostream& output) = 0;
 	
 		// Mutators
 		void setTitle(std::string title);
-		void setTitleFromMenu();
+		void setTitleFromMenu(std::istream& input, std::ostream& output);
 		void operateSubTaskMenu();
 
 		// Accessors

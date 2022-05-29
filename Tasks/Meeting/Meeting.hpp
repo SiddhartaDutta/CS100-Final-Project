@@ -64,7 +64,7 @@ class Meeting : public ParentTask {
 		void setLocation(std::string location);
 
 		/// Runs menu to edit all attributes : follows pattern for universal object manip
-		void editTask();
+		void editTask(std::istream& input, std::ostream& output);
 
 		/* ACCESSORS */
 

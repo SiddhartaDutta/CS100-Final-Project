@@ -1,7 +1,7 @@
 #ifndef __MEETINGS_HPP__
 #define __MEETINGS_HPP__
 
-#include <vector>
+//#include <vector>
 
 #include "../ParentTask.hpp"
 #include "../../attributeClasses/Date.hpp"
@@ -24,9 +24,6 @@ class Meeting : public ParentTask {
 
 		// Location of task
 		string location;
-
-		// Subtask list
-		vector<ParentTask*> subTasks;
 
 	public:
 

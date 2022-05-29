@@ -1,10 +1,15 @@
 #ifndef __PARENT_TASK__
 #define __PARENT_TASK__
 
+#include <vector>
+
 class ParentTask {
 
 	protected:
 		std::string title;
+
+		// Subtask list
+		vector<ParentTask*> subTasks;
 
 	public:
 

@@ -4,10 +4,11 @@
 #include "gtest/gtest.h"
 
 #include "../../Tasks/ParentTask.hpp"
+#include "../../Tasks/Meeting/Meeting.hpp"
 
 TEST(ParentTask_NoMenuMutator, ExpectedInput){
     
-    ParentTask* test = new ParentTask();
+    ParentTask* test = new Meeting();
 
     test->setTitle("Sample Title - Event in 2 days.");
     
@@ -17,7 +18,7 @@ TEST(ParentTask_NoMenuMutator, ExpectedInput){
 
 TEST(ParentTask_NoMenuMutator, NumericalInput){
 
-    ParentTask* test = new ParentTask();
+    ParentTask* test = new Meeting();
 
     test->setTitle("123456.789");
     
@@ -26,7 +27,7 @@ TEST(ParentTask_NoMenuMutator, NumericalInput){
 
 TEST(ParentTask_NoMenuMutator, EmptyInput){
 
-    ParentTask* test = new ParentTask();
+    ParentTask* test = new Meeting();
 
     test->setTitle("");
     

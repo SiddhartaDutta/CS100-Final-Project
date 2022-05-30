@@ -10,7 +10,7 @@ class ParentTask {
 		std::string title;
 
 		// Subtask list
-		vector<ParentTask*> subTasks;
+		std::vector<ParentTask*> subTasks;
 
 	public:
 

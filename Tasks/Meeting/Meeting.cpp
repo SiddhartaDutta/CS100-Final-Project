@@ -48,16 +48,22 @@ void Meeting::editTask(std::istream& input, std::ostream& output){
 
 		switch (selection){
 			case 1:
+				this->setTitleFromMenu(cin, cout);
 				break;
 			case 2:
 				break;
 			case 3:
+				cout << "Input new location: ";
+				getline(cin, in);
+				this->setLocation(in);
+				cout << "Saved...\n";
 				break;
 			case 4:
 				break;
 			case 5:
 				break;
 			case 6:
+				this->operateSubTaskMenu();
 				break;
 			default:
 				throw selection;

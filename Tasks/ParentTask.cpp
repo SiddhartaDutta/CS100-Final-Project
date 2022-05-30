@@ -13,7 +13,6 @@ void ParentTask::setTitle(string title){ this->title = title; }
 
 void ParentTask::setTitleFromMenu(istream& input, ostream& output){
     output << "Input new title: ";
-    //input >> title;
     getline(input, title);
     output << "Saved...\n";
 }

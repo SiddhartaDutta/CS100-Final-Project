@@ -44,19 +44,54 @@ TEST(ParentTask_NoMenuMutator, EmptyInput){
 // Non-Standard Mutator - With Menu
 TEST(ParentTask_MenuMutator, ExpectedInput){
 
-    string titleInput = "Sample Title - Event in 2 days.";
-
     istringstream input;
     ostringstream output;
 
     input.str("Sample Title - Event in 2 days.");
 
     ParentTask* test = new Meeting();
-
     test->setTitleFromMenu(input, output);
 
     string expectedOutput = "Input new title: Saved...\n";
     EXPECT_EQ(output.str(), expectedOutput);
+
+    string expectedString = "Sample Title - Event in 2 days.";
+    EXPECT_EQ(test->getTitle(), expectedString);
+
+}
+
+TEST(ParentTask_MenuMutator, NumericalInput){
+
+    istringstream input;
+    ostringstream output;
+
+    input.str("123456.789");
+
+    ParentTask* test = new Meeting();
+    test->setTitleFromMenu(input, output);
+
+    string expectedOutput = "Input new title: Saved...\n";
+    EXPECT_EQ(output.str(), expectedOutput);
+
+    string expectedString = "123456.789";
+    EXPECT_EQ(test->getTitle(), expectedString);
+}
+
+TEST(ParentTask_MenuMutator, EmptyInput){
+    
+    istringstream input;
+    ostringstream output;
+
+    input.str("");
+
+    ParentTask* test = new Meeting("Test Title");
+    test->setTitleFromMenu(input, output);
+
+    string expectedOutput = "Input new title: Saved...\n";
+    EXPECT_EQ(output.str(), expectedOutput);
+
+    string expectedString = "";
+    EXPECT_EQ(test->getTitle(), expectedString);
 }
 
 #endif

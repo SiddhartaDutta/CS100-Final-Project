@@ -3,14 +3,14 @@
 
 #include <iostream>
 
-bool getNumericalInput(std::string input);
-
 class Date {
 
 	private:
 		int month;
 		int day;
 		int year;
+
+		bool getNumericalInput(std::string input);
 
 	public:
 		Date(int month = 0, int day = 0, int year = 0){
@@ -46,7 +46,7 @@ class Date {
 				output << "Input new year (enter number): ";
 				input >> in;
 
-				if(getNumericalInput(in)){
+				if(this->getNumericalInput(in)){
 					int yearTemp = stoi(in);
 				} else {
 					output << " Error: Invalid input with input: ";
@@ -57,7 +57,7 @@ class Date {
 				output << "Input new month (enter number): ";
 				input >> in;
 
-				if(getNumericalInput(in)){
+				if(this->getNumericalInput(in)){
 
 					int monthTemp = stoi(in);
 					if(!(monthTemp > 0 && monthTemp < 13)){
@@ -74,7 +74,7 @@ class Date {
 				output << "Input new day (enter number): ";
 				input >> in;
 
-				if(getNumericalInput(in)){
+				if(this->getNumericalInput(in)){
 
 					int dayTemp = stoi(in);
 
@@ -128,7 +128,7 @@ class Date {
 
 };
 
-bool getNumericalInput(std::string input){
+bool Date::getNumericalInput(std::string input){
 	try{
 		stoi(input);
 		return true;

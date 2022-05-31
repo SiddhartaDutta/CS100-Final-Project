@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-bool getNumericalInput(string input);
+bool getNumericalInput(std::string input);
 
 class Date {
 
@@ -34,7 +34,7 @@ class Date {
 		void setYear(int year){ this->year = year; }
 
 		void setDate(std::istream& input, std::ostream& output){
-			
+
 			try
 			{
 				std::string in;
@@ -128,7 +128,7 @@ class Date {
 
 };
 
-bool getNumericalInput(string input){
+bool getNumericalInput(std::string input){
 	try{
 		stoi(input);
 		return true;

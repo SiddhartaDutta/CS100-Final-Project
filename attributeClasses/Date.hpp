@@ -109,7 +109,7 @@ class Date {
 				day = dayTemp;
 				year = yearTemp;
 
-				std::output << "Saved...";
+				std::output << "Saved...\n";
 
 
 			}

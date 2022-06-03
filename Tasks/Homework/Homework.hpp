@@ -34,6 +34,7 @@ class Homework : public ParentTask{
 	void EditTask();
 		
         Date* GetDueDate() const;
-	Time* GetDueTime() const;
+	      Time* GetDueTime() const;
 }
+
 #endif

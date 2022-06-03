@@ -28,6 +28,8 @@ class Homework : public ParentTask{
 
         void EditDueTime(int hour, int minute);
 
+        void EditTitle(string title);
+
         void printAllInfo();
 	void EditTask();
 		

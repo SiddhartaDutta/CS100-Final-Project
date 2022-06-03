@@ -21,6 +21,10 @@ void Homework(string Title = "", int month = 0, int day = 0, int year = 0, int D
 
 }
 
+void EditTitle(string Title){
+    this->Title = Title; 
+}
+
 void EditDueDate(int month, int day, int year){
     DueDate->setMonth(month);
 	DueDate->setDay(day);
@@ -39,12 +43,9 @@ Time* Homework::GetDueTime() const { return DueTime; }
 
 
 void Homework::printAllInfo(){
-    GetDueDate();
-    GetDueTime();
+    cout << "Homework :" , GetDueDate(), GetDueTime();
+    cout << endl;
 }
 
-void Homework::editTask(){
-    GetDueDate();
-    GetDueTime();
-}
+void Homework::editTask(){}
 

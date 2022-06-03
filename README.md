@@ -186,4 +186,4 @@ The following dropdown contains general descriptions of every method currently i
  3. After all tests are confirmed to be passing, assign separate members to review and merge the development and testing branch (branch being worked on).
  4. After the branch is verified, it can be merged.
 
- Following this simple system, we were able to ensure code additions did not cause other parts of the project previously working to have errors or "break." Running compiling the project using the "Installation/Usage" instructions and running the "test.exe" file will run all currently implemented tests.
+ Following this simple system, we were able to ensure code additions did not cause other parts of the project previously working to have errors or "break." Compiling the project using the "Installation/Usage" instructions above and running the "test.exe" file will run all currently implemented tests.

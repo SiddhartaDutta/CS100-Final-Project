@@ -33,7 +33,7 @@ For this project, there are a total of <u>eight</u> different classes required. 
 
 - <span style="color:lime">Green:</span> The green category includes the *Meeting*, *GenericTask*, *Homework*, and *Shopping* subclasses. These classes inherit from *ParentClass* and act both as leaves for the composite pattern and as different concrete strategies for the strategy/compositor (the *ParentTask* class). These help to divide the different subtasks with their different parameters into different children classes with common algorithm calls so that they can be treated in a uniform manner. Each subclass contains accessors and mutators for their member variables while also containing an extra "menu-nized" mutator like that found in the `Date` and `Time` classes described above. 
 
-### Detailed Class Description
+### Detailed Class Descriptions
 The following dropdown contains general descriptions of every method currently implemented/planned to be implemented.
 
 <details><summary>Extended Descriptions</summary>

@@ -2,6 +2,7 @@
 #define __DATE_HPP__
 
 #include <iostream>
+#include <string>
 
 class Date {
 
@@ -10,7 +11,7 @@ class Date {
 		int day;
 		int year;
 
-		//bool getNumericalInput(std::string input);
+		bool getNumericalInput(std::string input);
 
 	public:
 		Date(int month = 0, int day = 0, int year = 0){
@@ -47,7 +48,7 @@ class Date {
 				input >> in;
 
 				if(this->getNumericalInput(in)){
-					int yearTemp = stoi(in);
+					int yearTemp = std::stoi(in);
 				} else {
 					output << " Error: Invalid input with input: ";
 					throw in;
@@ -59,7 +60,7 @@ class Date {
 
 				if(this->getNumericalInput(in)){
 
-					int monthTemp = stoi(in);
+					int monthTemp = std::stoi(in);
 					if(!(monthTemp > 0 && monthTemp < 13)){
 						output << " Error: Invalid month with value: ";
 						throw monthTemp;
@@ -76,7 +77,7 @@ class Date {
 
 				if(this->getNumericalInput(in)){
 
-					int dayTemp = stoi(in);
+					int dayTemp = std::stoi(in);
 
 					// If month has 31 days
 					if(monthTemp == 1 || monthTemp == 3 || monthTemp == 5 || monthTemp == 7 || monthTemp == 8 || monthTemp == 10 || monthTemp == 12){
@@ -128,13 +129,13 @@ class Date {
 
 };
 
-// bool Date::getNumericalInput(std::string input){
-// 	try{
-// 		stoi(input);
-// 		return true;
-// 	} catch (...){
-// 		return false;
-// 	}
-// }
+bool Date::getNumericalInput(std::string input){
+	try{
+		std::stoi(input);
+		return true;
+	} catch (...){
+		return false;
+	}
+}
 
 #endif

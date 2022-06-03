@@ -11,19 +11,14 @@ Users will be able to add, delete, view, and edit tasks/subtasks. These edits, r
 The program will be interacted through a CLI.
 
 ## Class Diagram
- Link to class diagram [here](https://app.moqups.com/HLxRWlfaIpcROvGcueaSVdEqONtGUJtv/view/page/aa458c046). 
 
- ![image of second version of class diagram](./images/IMG_2293.jpeg)
-
-The design patterns we chose include the following:
-
-- Strategy: We chose to use strategy to allow us to create and add new types of tasks easily that all share common algorithms with differing implementations. By making the abstraction prescribed by this pattern, we can quickly and easily add additional task subtypes and the algorithms required. It also allows the user to have a consistent syntax when dealing with multiple types of subtasks. This helps us write better code as we do not have to update client-side code every time a new subclass is created and thus enables us to better organize the code.
-
-For our program to work, we are using 6 classes. As denoted in the class diagram, the green are leaves for the strategy pattern with the orange acting as our base/parent class. The yellow section represents our client class which our main file will use to interact with the parent and subclass objects. The following describes all the core methods of the leaf classes:
+ ![image of current version of class diagram](./images/Screenshot_1515.png)
 
 The design patterns we chose include the following:
 
 - Strategy: We chose to use strategy to allow us to create and add new types of tasks easily that all share common algorithms with differing implementations. By making the abstraction prescribed by this pattern, we can quickly and easily add additional task subtypes and the algorithms required. It also allows the user to have a consistent syntax when dealing with multiple types of subtasks. This helps us write better code as we do not have to update client-side code every time a new subclass is created and thus enables us to better organize the code.
+
+- Composite: We used the composite strategy to a small degree to allows us to quickly create multiple different task subtypes that will all also be grouped together and interfaced by a single client class. By having the project set up in this format, we can not only easily integrate task subtypes because of their shared ParentTask class allowing for consistent 
 
  For our program to work, we are using 6 classes. As denoted in the class diagram, the green are leaves for the strategy pattern with the orange acting as our base/parent class. The yellow section represents our client class which our main file will use to interact with the parent and subclass objects. The following describes all the core methods of the leaf classes:
 

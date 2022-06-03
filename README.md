@@ -144,6 +144,8 @@ The following dropdown contains general descriptions of every method currently i
  ## Installation/Usage
  Since the project is still in development, installation is not currently an option. However, you can download the "test.exe" file which will run all current tests from here: [Google Drive to "test.exe"](https://drive.google.com/drive/folders/1P3eTyWPxXYc-eMa-bkTmEFtWDHt6gyM6?usp=sharing)
 
+</br>
+
  The "test.exe" file may not work. If that is the case, in an IDE with a C++ compiler, please run the following commands:
 
  **To clone the repository:**

@@ -12,14 +12,17 @@ The program will be interacted through a CLI.
 
 ## Class Diagram
 
- ![image of current version of class diagram](./images/Screenshot_1515.png)
+![image of current version of class diagram](./images/Screenshot_1515.png)
+
+### Strategy Patterns Implemented
 
 The design patterns we chose include the following:
 
-- Strategy: We chose to use strategy to allow us to create and add new types of tasks easily that all share common algorithms with differing implementations. By making the abstraction prescribed by this pattern, we can quickly and easily add additional task subtypes and the algorithms required. It also allows the user to have a consistent syntax when dealing with multiple types of subtasks. This helps us write better code as we do not have to update client-side code every time a new subclass is created and thus enables us to better organize the code.
+- Strategy: We chose to use strategy to allow us to create and add new types of tasks easily that all share common algorithms with differing implementations. By following the strategy pattern, we can quickly and easily add additional task subtypes and the respective algorithms required. It also allows the user to have a consistent syntax when dealing with multiple types of subtasks. This helps us write better code as we do not have to update client-side code every time a new subclass is created and thus enables us to better organize the code. It also allows us to quickly add new subtasks relatively quickly and smoothly. In the above diagram, the strategy pattern can be comprised by the blue, green, and yellow regions which show an abstract class "ParentTask" that has virtual functions implemented uniquly in the different subclasses. This allows for the composite subclass to use the same calls for the different objects while producing different results (due to the differing implementations of each respective algorithm).
 
-- Composite: We used the composite strategy to a small degree to allows us to quickly create multiple different task subtypes that will all also be grouped together and interfaced by a single client class. By having the project set up in this format, we can not only easily integrate task subtypes because of their shared ParentTask class allowing for consistent 
+- Composite: We used the composite strategy to a small degree to allows us to quickly create multiple different task subtypes that will all also be grouped together and interfaced by a single client class. By having the project set up in this format, we can not only easily integrate new task subtypes because of their shared ParentTask class allowing for consistent operation syntax, but the use of a strategy pattern compliments this fast development and integration promoting design. In the above diagram, the composite pattern can be comprised of the blue, green, and yellow regions which show the component class "ParentTask", the composite class "TaskManager", and the different leaves: "Meeting", "GenericTask", "Homework", "Shopping".
 
+### Class Descriptions
  For our program to work, we are using 6 classes. As denoted in the class diagram, the green are leaves for the strategy pattern with the orange acting as our base/parent class. The yellow section represents our client class which our main file will use to interact with the parent and subclass objects. The following describes all the core methods of the leaf classes:
 
 - PrintAllInfo() : Prints all member variable data
@@ -62,9 +65,16 @@ The following describes all the core methods of the client class:
  > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
  
  ## Screenshots
- > Screenshots of the input/output after running your application
+ Currently unavailable since project still in development.
+
  ## Installation/Usage
- > Instructions on installing and running your application
- ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
+
  
+ ## Testing
+ To test the project, we utilized the googletest testing framework. After setting up the appropriate files, we followed the following system to ensure the project was consistently validated:
+ 1. Develop code to solve current issue being solved.
+ 2. After development phase, begin rigorous testing of new code developed (test as many different/possible scenarios).
+ 3. After all tests are confirmed to be passing, assign separate members to review and merge the development and testing branch (branch being worked on).
+ 4. After the branch is verified, it can be merged.
+
+ Following this simple system, we were able to ensure code additions did not cause other parts of the project previously working to have errors or "break." Running compiling the project using the "Installation/Usage" instructions and running the "test.exe" file will run all currently implemented tests.

@@ -22,7 +22,7 @@ The design patterns we chose include the following:
 
 - Composite: We used the composite strategy to a small degree to allows us to quickly create multiple different task subtypes that will all also be grouped together and interfaced by a single client class. By having the project set up in this format, we can not only easily integrate new task subtypes because of their shared ParentTask class allowing for consistent operation syntax, but the use of a strategy pattern compliments this fast development and integration promoting design. In the above diagram, the composite pattern can be comprised of the blue, green, and yellow regions which show the component class *ParentTask*, the composite class *TaskManager*, and the different leaves: *Meeting*, *GenericTask*, *Homework*, *Shopping*.
 
-### Class Descriptions
+### General Class Descriptions
 For this project, there are a total of <u>eight</u> different classes required. The classes, as depicted in the diagram, are divided into <u>four</u> different categories. The four categories are:
 
 - <span style="color:cornflowerblue">Blue:</span> The single blue class, *ParentTask*, acts as both an abstract class for the implemented strategy pattern and as the component class for the implemented composite pattern. It contains the member variables `title` and `subTasks` which represent the title of a task and the subtasks that can make up a given task, respectively. As these are shared by all subclasses, they can be protected variables of the abstract class. The pure virtual methods of the class are editTask and printAllInfo as each subclass has it's own unique member variables so editing and printing all of its data requires different algorithms.
@@ -33,7 +33,102 @@ For this project, there are a total of <u>eight</u> different classes required. 
 
 - <span style="color:lime">Green:</span> The green category includes the *Meeting*, *GenericTask*, *Homework*, and *Shopping* subclasses. These classes inherit from *ParentClass* and act both as leaves for the composite pattern and as different concrete strategies for the strategy/compositor (the *ParentTask* class). These help to divide the different subtasks with their different parameters into different children classes with common algorithm calls so that they can be treated in a uniform manner. Each subclass contains accessors and mutators for their member variables while also containing an extra "menu-nized" mutator like that found in the `Date` and `Time` classes described above. 
 
+### Detailed Class Description
+The following dropdown contains general descriptions of every method currently implemented/planned to be implemented.
 
+<details><summary>Extended Descriptions</summary>
+
+***ParentTask***
+>- `virtual void printAllInfo()` : Prints all object data formatted appropriately for the *ParentTask* type object's member variables.
+
+>- `virtual void editTask(std::istream& input, std::ostream& output)` : Calls "menu-nized" mutator for the appropriate *ParentTask* type object.
+
+>- `string getTitle()` : Returns the title of the *ParentTask* type object.
+
+>- `void setTitle(std::string title)` : Sets *ParentTask* type object's title.
+
+>- `void setTitleFromMenu(std::istream& input, std::ostream& output)` : Sets *ParentTask* type object's title using a menu.
+
+>- `void operateSubTaskMenu()` : Operates the menu to edit the subtasks of a given *ParentTask* type object.
+
+***Meeting***
+>- `Time* getStartTime()` : Returns the start time of the *Meeting* object.
+
+>- `Time* getEndTime()` : Returns the end time of the *Meeting* object.
+
+>- `Date* getDate()` : Returns the date of the *Meeting* object.
+
+>- `string getLocation()` : Returns the location of the *Meeting* object.
+
+>- `void setStartTime(int hour, int minute)` : Edits the *Meeting* object's start time.
+
+>- `void setEndTime(int hour, int minute)` : Edits the *Meeting* object's end time.
+
+>- `void setDate(int month, int day, int year)` : Edits the *Meeting* object's date.
+
+>- `void setLocation(string location)` : Edits the *Meeting* object's location.
+
+***GenericTask***
+>- `string getDescription()` : Returns the *GenericTask* object's description.
+
+>- `void setDescription(string description)` : Edits the *GenericTask* object's description.
+
+***Homework***
+>- `Date* getDueDate()` : Returns the due date of the *Homework* object.
+
+>- `Time* getDueTime()` : Returns the due time of the *Homework* object.
+
+>- `void setDueDate(int month, int day, int year)` : Edits the *Homework* object's due date.
+
+>- `void setDueTime(int hour, int minute)` : Edits the *Homework* object's due time.
+
+***Shopping***
+>- `vector<string*> getShoppingList()` : Return the *Shopping* object's "shopping list".
+
+>- `void setShoppingList(int index, std::string newItem)` : Edits a single element of the *Shopping* object's "shopping list".
+
+>- `void addItem(std::string newItem)` : Adds a single element to the *Shopping* object's "shopping list".
+
+>- `void removeItem(int index)` : Removes a single element from the *Shopping* object's "shopping list".
+
+***TaskManager***
+>- `void add()` : Calls a "menu-nized" mutator to add a task to the *TaskManager* object's subTasks vector.
+
+>- `void delete()` : Calls a "menu-nized" mutator to delete a task from the *TaskManager* object's subTasks vector.
+
+>- `void newNext()` : Displays first task to be finished from the *TaskManager* object's subTasks vector.
+
+>- `void viewByTitle()` : Calls a "menu-nized" accessor to search and display tasks by title.
+
+>- `void reverseLastEdit()` : Sets the *TaskManager* object's subTasks vector to the *TaskManager* object's OldToDoList vector.
+
+***Date***
+>- `int getMonth()` : Returns the *Date* object's month.
+
+>- `int getDay()` : Returns the *Date* object's day.
+
+>- `int getYear()` : Returns the *Date* object's year.
+
+>- `void setMonth(int month)` : Edits the *Date* object's month.
+
+>- `void setDay(int day)` : Edits the *Date* object's day.
+
+>- `void setYear(int year)` : Edits the *Date* object's year.
+
+>- `void setDate(std::istream& input, std::ostream& output)` : Calls a "menu-nized" mutator to edit the *Date* object.
+
+***Time***
+>- `int getHour()` : Returns the *Time* object's hour.
+
+>- `int getMinute()` : Returns the *Time* object's minute.
+
+>- `void setHour(int hour)` : Edits the *Time* object's hour.
+
+>- `void setMinute(int minute)` : Edits the *Time* object's minute.
+
+>- `void setTime(std::istream& input, std::ostream& output)` : Calls a "menu-nized" mutator to edit the *Time* object.
+
+</details>
 
 - PrintAllInfo() : Prints all member variable data
 - EditTitle() : Edits title of task

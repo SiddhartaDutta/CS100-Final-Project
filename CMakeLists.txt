@@ -6,13 +6,11 @@ ADD_SUBDIRECTORY(googletest)
 
 ADD_EXECUTABLE(test
 	unit_tests.cpp
-	Tasks/ParentTask.cpp
 	Tasks/Meeting/Meeting.cpp
 )
 
 ADD_EXECUTABLE(main
 	main.cpp
-	Tasks/ParentTask.cpp
 	Tasks/Meeting/Meeting.cpp
 )
 

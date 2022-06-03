@@ -1,16 +1,10 @@
 #ifndef __PARENT_TASK__
 #define __PARENT_TASK__
 
-#include <vector>
-#include <iostream>
-
 class ParentTask {
 
 	protected:
 		std::string title;
-
-		// Subtask list
-		std::vector<ParentTask*> subTasks;
 
 	public:
 
@@ -22,15 +16,13 @@ class ParentTask {
 
 		// Pure Virtual Functions
 		virtual void printAllInfo() = 0;
-		virtual void editTask(std::istream& input, std::ostream& output) = 0;
+		virtual void editTask() = 0;
 	
 		// Mutators
-		void setTitle(std::string title);
-		void setTitleFromMenu(std::istream& input, std::ostream& output);
-		void operateSubTaskMenu();
+		void setTitle(std::string title){ this-> title = title; }
 
 		// Accessors
-		std::string getTitle();
+		std::string getTitle(){ return title; }
 
 };
 

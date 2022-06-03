@@ -1,7 +1,7 @@
 #ifndef __MEETINGS_HPP__
 #define __MEETINGS_HPP__
 
-//#include <vector>
+#include <vector>
 
 #include "../ParentTask.hpp"
 #include "../../attributeClasses/Date.hpp"
@@ -24,6 +24,9 @@ class Meeting : public ParentTask {
 
 		// Location of task
 		string location;
+
+		// Subtask list
+		vector<ParentTask*> subTasks;
 
 	public:
 
@@ -63,12 +66,12 @@ class Meeting : public ParentTask {
 		/// Edits location of task
 		void setLocation(std::string location);
 
-		/// Runs menu to edit all attributes : follows pattern for universal object manip
-		void editTask(std::istream& input, std::ostream& output);
+		
 
 		/* ACCESSORS */
 
 		void printAllInfo();
+		void editTask();
 		
 		Time* getStartTime() const;
 		Time* getEndTime() const;

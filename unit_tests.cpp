@@ -1,8 +1,5 @@
 #include "gtest/gtest.h"
 
-// ParentTask Class Unit Tests
-#include "unitTests/ParentTask/parenttask_mutator_tests.hpp"
-
 // Meeting Class Unit Tests
 #include "unitTests/Meeting/meeting_construct.hpp"
 

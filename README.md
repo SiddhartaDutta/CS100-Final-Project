@@ -135,6 +135,24 @@ The following dropdown contains general descriptions of every method currently i
 
  ## Installation/Usage
  Since the project is still in development, installation is not currently an option. However, you can download the "test.exe" file which will run all current tests from here: [Google Drive to "test.exe"](https://drive.google.com/drive/folders/1P3eTyWPxXYc-eMa-bkTmEFtWDHt6gyM6?usp=sharing)
+
+ The "test.exe" file may not work. If that is the case, in an IDE with a C++ compiler, please run the following commands:
+
+ **To clone the repository:**
+
+ `git clone --recursive https://github.com/cs100/final-project-decoders.git`
+
+ **To create the MakeFile:**
+
+ `cmake .` or `cmake3 .`
+
+ <t>followed by:</t>
+ 
+ `make`
+
+ **To run the "test.exe" file:**
+
+ `./test`
  
  ## Testing
  To test the project, we utilized the googletest testing framework. After setting up the appropriate files, we followed the following system to ensure the project was consistently validated:

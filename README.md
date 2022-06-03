@@ -146,7 +146,7 @@ The following dropdown contains general descriptions of every method currently i
 
 </br>
 
- The "test.exe" file may not work. If that is the case, in an IDE with a C++ compiler and CMake*, please run the following commands:
+ The "test.exe" file may not work. If that is the case, in an IDE/development environment with a C++ compiler and CMake*, please run the following commands:
 
  **To clone the repository:**
 
@@ -166,7 +166,7 @@ The following dropdown contains general descriptions of every method currently i
 
  </br>
 
- *(If your IDE does not have CMake, please install it: [Guide to installing CMake](https://cmake.org/install/))
+ *(If your IDE/development environment does not have CMake, please install it: [Guide to installing CMake](https://cmake.org/install/))
  
  ## Testing
  To test the project, we utilized the googletest testing framework. After setting up the appropriate files, we followed the following system to ensure the project was consistently validated:

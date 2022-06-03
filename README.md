@@ -12,7 +12,7 @@ The program will be interacted through a CLI.
 
 ## Class Diagram
 
-![image of current version of class diagram](./images/Screenshot_1524.png)
+![Image of current version of class diagram.](./images/Screenshot_1524.png)
 
 ### Strategy Patterns Implemented
 
@@ -131,7 +131,15 @@ The following dropdown contains general descriptions of every method currently i
 </details> 
  
  ## Screenshots
- Currently unavailable since project still in development.
+ Currently, main project screenshots are unavailable since project still in development.
+
+<details><summary>Unit Test Screenshots</summary>
+
+ ![Image of top half of ./test run.](./images/Screenshot_1526.png)
+
+ ![Image of bottom half of ./test run.](./images/Screenshot_1525.png)
+
+</details>
 
  ## Installation/Usage
  Since the project is still in development, installation is not currently an option. However, you can download the "test.exe" file which will run all current tests from here: [Google Drive to "test.exe"](https://drive.google.com/drive/folders/1P3eTyWPxXYc-eMa-bkTmEFtWDHt6gyM6?usp=sharing)

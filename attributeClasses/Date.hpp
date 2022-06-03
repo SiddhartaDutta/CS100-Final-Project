@@ -10,7 +10,7 @@ class Date {
 		int day;
 		int year;
 
-		bool getNumericalInput(std::string input);
+		//bool getNumericalInput(std::string input);
 
 	public:
 		Date(int month = 0, int day = 0, int year = 0){
@@ -128,13 +128,13 @@ class Date {
 
 };
 
-bool Date::getNumericalInput(std::string input){
-	try{
-		stoi(input);
-		return true;
-	} catch (...){
-		return false;
-	}
-}
+// bool Date::getNumericalInput(std::string input){
+// 	try{
+// 		stoi(input);
+// 		return true;
+// 	} catch (...){
+// 		return false;
+// 	}
+// }
 
 #endif

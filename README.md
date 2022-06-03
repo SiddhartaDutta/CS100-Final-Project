@@ -150,19 +150,31 @@ The following dropdown contains general descriptions of every method currently i
 
  **To clone the repository:**
 
- `git clone --recursive https://github.com/cs100/final-project-decoders.git`
+ ```sh
+ git clone --recursive https://github.com/cs100/final-project-decoders.git
+ ```
 
  **To create the MakeFile:**
 
- `cmake .` or `cmake3 .`
+ ```sh
+ cmake .
+ ``` 
+ or 
+ ```sh
+ cmake3 .
+ ```
 
- <t>followed by:</t>
+ followed by:
  
- `make`
+ ```sh
+ make
+ ```
 
  **To run the "test.exe" file:**
 
- `./test`
+ ```sh
+ ./test
+ ```
 
  </br>
 

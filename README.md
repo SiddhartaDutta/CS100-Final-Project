@@ -12,7 +12,7 @@ The program will be interacted through a CLI.
 
 ## Class Diagram
 
-![image of current version of class diagram](./images/Screenshot_1515.png)
+![image of current version of class diagram](./images/Screenshot_1524.png)
 
 ### Strategy Patterns Implemented
 

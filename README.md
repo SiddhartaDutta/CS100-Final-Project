@@ -128,39 +128,7 @@ The following dropdown contains general descriptions of every method currently i
 
 >- `void setTime(std::istream& input, std::ostream& output)` : Calls a "menu-nized" mutator to edit the *Time* object.
 
-</details>
-
-- PrintAllInfo() : Prints all member variable data
-- EditTitle() : Edits title of task
-- EditStartTime() : Edits start time of task
-- EditEndTime() : Edits end time of task
-- EditDate() : Edits date of task
-- EditLocation() : Edits location of task
-- EditSubTasks() : Edits subtasks
-- EditDescription() : Edits description of task
-- EditDueDate() : Edits task due date
-- EditDueTime() : Edits task due time
-- EditShoppingList() : Edits string list
-- GetTitle() : Returns task title
-- GetStartTime() : Returns task start time
-- GetEndTime() : Returns task end time
-- GetDate() : Returns task date
-- GetLocation() : Returns task location
-- GetSubTasks() : Returns subtask list
-- GetDescription() : Returns task description
-- GetDueDate() : Returns task due date
-- GetDueTime() : Returns task due time
-- GetShoppingList() : Returns task string list
-
-The following describes all the core methods of the client class:
-
-- PrintAllInfo() : Prints all member variable data
-- Add() : Add task
-- Delete() : Delete task
-- ViewNext() : View next task
-- ViewByTitle() : Search tasks by title
-- Edit() : Edit task
-- ReverseLastEdit() : Reverse last edit 
+</details> 
  
  ## Screenshots
  Currently unavailable since project still in development.

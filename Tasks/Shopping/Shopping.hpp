@@ -4,11 +4,10 @@
 #include <iostream>
 #include <vector>
 #include <string>
-
+#include "../ParentTask.hpp"
 
 using namespace std;
 
-#include "../ParentTask.hpp"
 
 class Shopping : public ParentTask {
 
@@ -18,8 +17,8 @@ class Shopping : public ParentTask {
 
         public:
 
-                ShoppingList(vector<string*> slist ){
-                        this-> ShoppingList = slist;
+                ShoppingList(){
+                        return;
                 }
 
         /* mutators */

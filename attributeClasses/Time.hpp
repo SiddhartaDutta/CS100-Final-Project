@@ -36,22 +36,22 @@ class Time {
 			{
 				std::string in1, in2;
 
-				output << "Input new hour (enter number (24-hour clock): ";
+				output << "Input new hour (enter number (24-hour clock)): ";
 				input >> in1;
 
-				output << std::endl;
+				//output << std::endl;
 
 				output << "Input new minute (enter number): ";
 				input >> in2;
 
-				output << std::endl;
+				//output << std::endl;
 
 				int tempHour = std::stoi(in1) % 24;
 				int tempMinute = std::stoi(in2) % 60;
 
 				this->setHour(tempHour);
 				this->setMinute(tempMinute);
-				output << " Saved...\n";
+				output << "Saved...\n\n";
 			}
 			catch(...)
 			{

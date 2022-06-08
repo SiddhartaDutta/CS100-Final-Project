@@ -47,19 +47,19 @@ class Date {
 				output << "Input new year (enter number): ";
 				input >> in1;
 
-				output << std::endl;
+				//output << std::endl;
 
 				// Month Input
 				output << "Input new month (enter number): ";
 				input >> in2;
 
-				output << std::endl;
+				//output << std::endl;
 
 				// Day Input
 				output << "Input new day (enter number): ";
 				input >> in3;
 
-				output << std::endl;
+				//output << std::endl;
 
 				// Convert all inputs
 				int tempMonth = std::stoi(in2);
@@ -74,14 +74,14 @@ class Date {
 
 				// Verify day
 				if(tempMonth == 1 || tempMonth == 3 || tempMonth == 5 || tempMonth == 7 || tempMonth == 8 || tempMonth == 10 || tempMonth == 12){
-					if(!(tempDay > 0 && tempDay < 31)){
+					if(!(tempDay > 0 && tempDay < 32)){
 						output << " Error: Invalid day-month combo with value: ";
 						throw tempDay;
 					}
 				} 
 				// If month has 30 days
 				else if(tempMonth == 4 || tempMonth == 6 || tempMonth == 9 || tempMonth == 11){
-					if(!(tempDay > 0 && tempDay < 30)){
+					if(!(tempDay > 0 && tempDay < 31)){
 						output << " Error: Invalid day-month combo with value: ";
 						throw tempDay;
 					}
@@ -97,7 +97,7 @@ class Date {
 				this->setDay(tempDay);
 				this->setMonth(tempMonth);
 				this->setYear(tempYear);
-				output << " Saved...\n";
+				output << "Saved...\n\n";
 
 			} catch(int issueInt){
 				output << issueInt << '\n';

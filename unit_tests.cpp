@@ -16,6 +16,7 @@
 #include "unitTests/Date/date_constructor_tests.hpp"
 #include "unitTests/Date/date_mutator_tests.hpp"
 #include "unitTests/Date/date_full_mutator_tests.hpp"
+#include "unitTests/Date/date_print_tests.hpp"
 
 // Time Class Unit Tests
 #include "unitTests/Time/time_constructor_tests.hpp"

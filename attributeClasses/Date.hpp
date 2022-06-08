@@ -27,6 +27,10 @@ class Date {
 
 		int getYear() const { return year; }
 
+		void print(std::ostream& output){
+			output << month << '/' << day << '/' << year << std::endl;
+		}
+
 		// Mutators
 		void setMonth(int month){ this->month = month; }
 

@@ -58,7 +58,7 @@ int main(){
 
 	} while (run);
 
-	cout << "Program exited.";
+	cout << "Program exited.\n";
 
 	return 0;
 

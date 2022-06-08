@@ -14,8 +14,8 @@ void ParentTask::setTitle(string title){ this->title = title; }
 void ParentTask::setTitleFromMenu(istream& input, ostream& output){
     string temp;
     output << "Input new title: ";
-    input.sync();
+    input.ignore();
     getline(input, temp);
     title = temp;
-    output << "Saved...\n";
+    output << "Saved...\n\n";
 }

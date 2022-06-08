@@ -40,7 +40,7 @@ void Meeting::editTask(std::istream& input, std::ostream& output){
 	// Print task
 	this->printAllInfo();
 
-	output << "\n";
+	//output << "\n";
 
 	// Print menu
 	output << "Options\n";
@@ -67,13 +67,14 @@ void Meeting::editTask(std::istream& input, std::ostream& output){
 				this->setTitleFromMenu(input, output);
 				break;
 			case 2:
+				this->getDate()->setDate(input, output);
 				break;
 			case 3:
 				output << "Input new location: ";
-				//string* temp = new string;
-				getline(input, inputGetline);
-				//this->setLocation(inputGetline);
-				output << "Saved...\n";
+				input.ignore();
+				getline(input, in);
+				this->setLocation(in);
+				output << "Saved...\n\n";
 				break;
 			case 4:
 				break;
@@ -83,6 +84,7 @@ void Meeting::editTask(std::istream& input, std::ostream& output){
 				//this->operateSubTaskMenu();
 				break;
 			case 7:
+				output << '\n';
 				break;
 			default:
 				throw selection;

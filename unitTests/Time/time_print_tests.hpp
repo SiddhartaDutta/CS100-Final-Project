@@ -18,6 +18,8 @@ TEST(Time_Print, Expected_Output){
 
     EXPECT_EQ(output.str(), "0:0\n");
 
+    delete test;
+
 }
 
 #endif

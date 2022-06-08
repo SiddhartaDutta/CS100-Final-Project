@@ -36,6 +36,8 @@ TEST(MeetingConstructor, ExpectedInputs){
 	// Test end minute
 	EXPECT_EQ(test->getEndTime()->getMinute(), 59);
 
+	delete test;
+
 }
 
 TEST(MeetingConstructor, EmptyConstructor){
@@ -68,6 +70,8 @@ TEST(MeetingConstructor, EmptyConstructor){
 
 	// Test end minute
 	EXPECT_EQ(test->getEndTime()->getMinute(), 0); 
+
+	delete test;
 	
 }
 
@@ -101,6 +105,8 @@ TEST(MeetingConstructor, UnexpectedInputs){
 
 	// Test end minute
 	EXPECT_EQ(test->getEndTime()->getMinute(), 100);
+
+	delete test;
 
 }
 

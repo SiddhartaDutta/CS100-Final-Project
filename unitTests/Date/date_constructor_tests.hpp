@@ -13,6 +13,8 @@ TEST(DateConstructor, DefaultConstructor){
 	EXPECT_EQ(test->getDay(), 0);
 	EXPECT_EQ(test->getYear(), 0);
 
+	delete test;
+
 }
 
 TEST(DateConstructor, MonthParamOnly){
@@ -22,6 +24,8 @@ TEST(DateConstructor, MonthParamOnly){
 	EXPECT_EQ(test->getMonth(), 1);
 	EXPECT_EQ(test->getDay(), 0);
 	EXPECT_EQ(test->getYear(), 0);
+
+	delete test;
 
 }
 
@@ -33,6 +37,8 @@ TEST(DateConstructor, MonthAndDayParamOnly){
 	EXPECT_EQ(test->getDay(), 31);
 	EXPECT_EQ(test->getYear(), 0);
 
+	delete test;
+
 }
 
 TEST(DateConstructor, AllParams){
@@ -42,6 +48,8 @@ TEST(DateConstructor, AllParams){
 	EXPECT_EQ(test->getMonth(), 1);
 	EXPECT_EQ(test->getDay(), 31);
 	EXPECT_EQ(test->getYear(), 2022);
+
+	delete test;
 
 }
 

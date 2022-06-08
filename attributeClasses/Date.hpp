@@ -88,7 +88,7 @@ class Date {
 				} 
 				// If February
 				else if(tempMonth == 2){
-					if(!(tempDay > 0 && tempDay < 29) || (tempDay == 28 && (tempDay%4 != 0))){
+					if(!(tempDay > 0 && tempDay < 29) || (tempDay == 29 && (tempDay%4 == 0))){
 						output << " Error: Invalid day-month combo with value: ";
 						throw tempDay;
 					}

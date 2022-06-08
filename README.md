@@ -132,6 +132,47 @@ The following dropdown contains general descriptions of every method currently i
  ## Screenshots
 <details><summary>Current Main Screenshots</summary>
 
+Image of start menu:
+
+![Image of start menu.](./images/Screenshot_1545.png)
+
+Image of invalid input:
+
+![Image of invalid input.](./images/Screenshot_1548.png)
+
+Image of when task data is printed (specifically "Meeting" tasks in this example): 
+
+![Image of task data printed.](./images/Screenshot_1546.png)
+
+Image of when the edit menu is selected:
+
+![Image of edit menu.](./images/Screenshot_1547.png)
+
+Image of invalid input in edit menu:
+
+![Image of invalid input in edit menu.](./images/Screenshot_1549.png)
+
+Image of successful title change:
+
+![Image of successful title change.](./images/Screenshot_1550.png)
+
+Image of successful date change:
+
+![Image of successful date change.](./images/Screenshot_1551.png)
+
+Image of successful location change:
+
+![Image of successful location change.](./images/Screenshot_1552.png)
+
+Image of successful edit menu exit:
+
+![Image of successful exit.](./images/Screenshot_1553.png)
+
+Image of program exit:
+
+![Image of program exit.](./images/Screenshot_1554.png)
+
+
 </details>
 
 <details><summary>Unit Test Screenshots</summary>

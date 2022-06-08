@@ -32,20 +32,13 @@ class Meeting : public ParentTask {
 			
 			this->title = title;
 			
-			eventDate = new Date();
-			eventDate->setMonth(month);
-			eventDate->setDay(day);
-			eventDate->setYear(year);
+			eventDate = new Date(month, day, year);
 
 			this->location = location;
 
-			startTime = new Time();
-			startTime->setHour(startTimeHour);
-			startTime->setMinute(startTimeMin);
+			startTime = new Time(startTimeHour, startTimeMin);
 
-			endTime = new Time();
-			endTime->setHour(endTimeHour);
-			endTime->setMinute(endTimeMin);
+			endTime = new Time(endTimeHour, endTimeMin);
 	
 		}
 

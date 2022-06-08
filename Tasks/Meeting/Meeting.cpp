@@ -8,7 +8,9 @@ using namespace std;
 /* ACCESSORS */
 
 void Meeting::printAllInfo(){
-	cout << "test\n";
+	cout << "Meeting Task:\n";
+	cout << "\tTitle: " + title << endl;
+	cout << "\tDate:";
 }
 
 Time* Meeting::getStartTime() const { return startTime; }
@@ -21,7 +23,7 @@ string Meeting::getLocation() const { return location; }
 
 /* MUTATORS */
 void Meeting::editTask(std::istream& input, std::ostream& output){
-	output << "Selected Task:\n\n";
+	output << "--- Selected Task ---\n";
 
 	// Print task
 	this->printAllInfo();
@@ -48,7 +50,7 @@ void Meeting::editTask(std::istream& input, std::ostream& output){
 
 		switch (selection){
 			case 1:
-				//this->setTitleFromMenu(cin, cout);
+				this->setTitleFromMenu(cin, cout);
 				break;
 			case 2:
 				break;

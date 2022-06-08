@@ -12,7 +12,11 @@ string ParentTask::getTitle(){ return title; }
 void ParentTask::setTitle(string title){ this->title = title; }
 
 void ParentTask::setTitleFromMenu(istream& input, ostream& output){
+    string temp;
     output << "Input new title: ";
-    getline(input, title);
+    // input.sync();
+    // getline(input, temp);
+    input >> temp;
+    title = temp;
     output << "Saved...\n";
 }

@@ -103,7 +103,7 @@ class Date {
 				output << issueInt << '\n';
 				output << " Operation aborted.\n\n";
 			} catch(...){
-				output << " Error: Non-numerical Input.\n Operation aborted.\n\n";
+				output << " Error: Non-numerical input.\n Operation aborted.\n\n";
 			}
 
 #pragma region oldC

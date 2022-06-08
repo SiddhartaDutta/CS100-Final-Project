@@ -77,8 +77,10 @@ void Meeting::editTask(std::istream& input, std::ostream& output){
 				output << "Saved...\n\n";
 				break;
 			case 4:
+				this->getStartTime()->setTime(input, output);
 				break;
 			case 5:
+				this->getEndTime()->setTime(input, output);
 				break;
 			case 6:
 				//this->operateSubTaskMenu();
@@ -92,11 +94,11 @@ void Meeting::editTask(std::istream& input, std::ostream& output){
 	} 
 	catch (int i){
 		output << " Error: Invalid selection with value: " << i << '\n';
-		output << " Operation aborted.\n";
+		output << " Operation aborted.\n\n";
 	}
 	catch(...){
 		output << " Error: Invalid input (non-numerical input).\n";
-		output << " Operation aborted.\n";
+		output << " Operation aborted.\n\n";
 	}
 	
 	

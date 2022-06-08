@@ -40,6 +40,72 @@ class Date {
 
 		void setDate(std::istream& input, std::ostream& output){
 
+			try{
+				std::string in1, in2, in3;
+
+				// Year Input
+				output << "Input new year (enter number): ";
+				input >> in1;
+
+				output << std::endl;
+
+				// Month Input
+				output << "Input new month (enter number): ";
+				input >> in2;
+
+				output << std::endl;
+
+				// Day Input
+				output << "Input new day (enter number): ";
+				input >> in3;
+
+				output << std::endl;
+
+				// Convert all inputs
+				int tempMonth = std::stoi(in2);
+				int tempDay = std::stoi(in3);
+				int tempYear = std::stoi(in1);
+
+				// Verify month
+				if(!(tempMonth > 0 && tempMonth < 13)){
+					output << " Error: Invalid month with value: ";
+					throw tempMonth;
+				}
+
+				// Verify day
+				if(tempMonth == 1 || tempMonth == 3 || tempMonth == 5 || tempMonth == 7 || tempMonth == 8 || tempMonth == 10 || tempMonth == 12){
+					if(!(tempDay > 0 && tempDay < 31)){
+						output << " Error: Invalid day-month combo with value: ";
+						throw tempDay;
+					}
+				} 
+				// If month has 30 days
+				else if(tempMonth == 4 || tempMonth == 6 || tempMonth == 9 || tempMonth == 11){
+					if(!(tempDay > 0 && tempDay < 30)){
+						output << " Error: Invalid day-month combo with value: ";
+						throw tempDay;
+					}
+				} 
+				// If February
+				else if(tempMonth == 2){
+					if(!(tempDay > 0 && tempDay < 29) || (tempDay == 28 && (tempDay%4 != 0))){
+						output << " Error: Invalid day-month combo with value: ";
+						throw tempDay;
+					}
+				}
+
+				this->setDay(tempDay);
+				this->setMonth(tempMonth);
+				this->setYear(tempYear);
+				output << " Saved...\n";
+
+			} catch(int issueInt){
+				output << issueInt << '\n';
+				output << " Operation aborted.\n";
+			} catch(...){
+				output << " Error: Non-numerical Input.\n Operation aborted.\n";
+			}
+
 #pragma region oldC
 /*
 			try

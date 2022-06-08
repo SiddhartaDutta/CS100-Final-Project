@@ -1,6 +1,9 @@
 #ifndef __TIME_HPP__
 #define __TIME_HPP__
 
+#include <string>
+#include <iostream>
+
 class Time {
 
 	private:
@@ -17,6 +20,10 @@ class Time {
 		int getHour() const { return hour; }
 
 		int getMinute() const { return minute; }
+
+		void print(std::ostream& output){
+			output << hour << ':' << minute << std::endl;
+		}
 
 		// Mutators
 		void setHour(int hour){ this->hour = hour; }

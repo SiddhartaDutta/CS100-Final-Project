@@ -8,9 +8,14 @@ using namespace std;
 /* ACCESSORS */
 
 void Meeting::printAllInfo(){
-	cout << "Meeting Task:\n";
-	cout << "\tTitle: " + title << endl;
-	cout << "\tDate:";
+	cout << "\tTask Type: Meeting\n";
+	cout << "\tTitle: " << title << endl;
+
+	cout << "\tDate: ";
+	eventDate->print(cout);
+
+	cout << "\tStart Time: ";
+	
 }
 
 Time* Meeting::getStartTime() const { return startTime; }

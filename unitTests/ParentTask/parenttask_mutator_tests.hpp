@@ -47,12 +47,12 @@ TEST(ParentTask_MenuMutator, ExpectedInput){
     istringstream input;
     ostringstream output;
 
-    input.str("Sample Title - Event in 2 days.");
+    input.str("SSample Title - Event in 2 days.");
 
     ParentTask* test = new Meeting();
     test->setTitleFromMenu(input, output);
 
-    string expectedOutput = "Input new title: Saved...\n";
+    string expectedOutput = "Input new title: Saved...\n\n";
     EXPECT_EQ(output.str(), expectedOutput);
 
     string expectedString = "Sample Title - Event in 2 days.";
@@ -65,12 +65,12 @@ TEST(ParentTask_MenuMutator, NumericalInput){
     istringstream input;
     ostringstream output;
 
-    input.str("123456.789");
+    input.str("1123456.789");
 
     ParentTask* test = new Meeting();
     test->setTitleFromMenu(input, output);
 
-    string expectedOutput = "Input new title: Saved...\n";
+    string expectedOutput = "Input new title: Saved...\n\n";
     EXPECT_EQ(output.str(), expectedOutput);
 
     string expectedString = "123456.789";
@@ -87,7 +87,7 @@ TEST(ParentTask_MenuMutator, EmptyInput){
     ParentTask* test = new Meeting("Test Title");
     test->setTitleFromMenu(input, output);
 
-    string expectedOutput = "Input new title: Saved...\n";
+    string expectedOutput = "Input new title: Saved...\n\n";
     EXPECT_EQ(output.str(), expectedOutput);
 
     string expectedString = "";

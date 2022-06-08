@@ -5,6 +5,7 @@
 
 // Meeting Class Unit Tests
 #include "unitTests/Meeting/meeting_construct.hpp"
+#include "unitTests/Meeting/meeting_mutator_tests.hpp"
 
 // GenericTask Class Unit Tests
 

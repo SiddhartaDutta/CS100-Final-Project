@@ -32,6 +32,8 @@ Date* Meeting::getDate() const { return eventDate; }
 string Meeting::getLocation() const { return location; }
 
 /* MUTATORS */
+void Meeting::setLocation(string location){ this->location = location; }
+
 void Meeting::editTask(std::istream& input, std::ostream& output){
 	output << "--- Selected Task ---\n";
 
@@ -70,7 +72,7 @@ void Meeting::editTask(std::istream& input, std::ostream& output){
 				output << "Input new location: ";
 				//string* temp = new string;
 				getline(input, inputGetline);
-				this->setLocation(inputGetline);
+				//this->setLocation(inputGetline);
 				output << "Saved...\n";
 				break;
 			case 4:

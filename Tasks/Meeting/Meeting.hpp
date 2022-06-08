@@ -61,7 +61,7 @@ class Meeting : public ParentTask {
 		void setDate(int month, int day, int year);
 
 		/// Edits location of task
-		void setLocation(std::string location);
+		void setLocation(string location);
 
 		/// Runs menu to edit all attributes : follows pattern for universal object manip
 		void editTask(std::istream& input, std::ostream& output);

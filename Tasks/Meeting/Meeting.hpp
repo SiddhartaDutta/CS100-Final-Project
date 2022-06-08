@@ -46,6 +46,10 @@ class Meeting : public ParentTask {
 			eventDate->~Date();
 			startTime->~Time();
 			endTime->~Time();
+
+			for(int x = 0; x < subTasks.size(); x++){
+				subTasks.at(x)->~ParentTask();
+			}
 		}
 
 		/* MUTATORS */

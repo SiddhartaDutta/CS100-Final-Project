@@ -132,6 +132,8 @@ The following dropdown contains general descriptions of every method currently i
  ## Screenshots
 <details><summary>Current Main Screenshots</summary>
 
+</br>
+
 Image of start menu:
 
 ![Image of start menu.](./images/Screenshot_1545.png)

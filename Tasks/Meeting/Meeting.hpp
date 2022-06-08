@@ -43,12 +43,12 @@ class Meeting : public ParentTask {
 		}
 
 		~Meeting(){
-			eventDate->~Date();
-			startTime->~Time();
-			endTime->~Time();
+			delete eventDate;
+			delete startTime;
+			delete endTime;
 
 			for(int x = 0; x < subTasks.size(); x++){
-				subTasks.at(x)->~ParentTask();
+				delete subTasks.at(x);
 			}
 		}
 

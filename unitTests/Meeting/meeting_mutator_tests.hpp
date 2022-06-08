@@ -1,5 +1,5 @@
-#ifndef __MEETING_CONSTRUCTORS_TESTS__
-#define __MEETING_CONSTRUCTORS_TESTS__
+#ifndef __MEETING_MUTATOR_TESTS__
+#define __MEETING_MUTATOR_TESTS__
 
 #include "gtest/gtest.h"
 
@@ -14,9 +14,9 @@ TEST(Meeting_Location_Mutator, Expected_Input){
 }
 
 TEST(Meeting_Location_Mutator, EmptyInput){
-    Meeting* test = new Meeting("Test Location: 12345 Street Blvd, LA, CA 12345");
+    Meeting* test = new Meeting("New Meeting", 5, 22, 2022, "UCR", 9, 20, 11, 59);
 
-    EXPECT_EQ(test->getLocation(), "Test Location: 12345 Street Blvd, LA, CA 12345");
+    EXPECT_EQ(test->getLocation(), "UCR");
 
     test->setLocation("");
 

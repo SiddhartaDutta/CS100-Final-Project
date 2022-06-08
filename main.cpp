@@ -45,6 +45,7 @@ int main(){
 
 				case 3:
 					cout << "Clearing used memory...\n";
+					delete mainTask;
 					run = false;
 					break;
 

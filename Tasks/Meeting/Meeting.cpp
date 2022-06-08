@@ -8,14 +8,19 @@ using namespace std;
 /* ACCESSORS */
 
 void Meeting::printAllInfo(){
+	cout << "Title: " << title << endl;
 	cout << "\tTask Type: Meeting\n";
-	cout << "\tTitle: " << title << endl;
 
 	cout << "\tDate: ";
 	eventDate->print(cout);
 
 	cout << "\tStart Time: ";
-	
+	startTime->print(cout);
+
+	cout << "\tEnd Time: ";
+	startTime->print(cout);
+
+	cout << "\tLocation: " << location << "\n\n";
 }
 
 Time* Meeting::getStartTime() const { return startTime; }
@@ -43,6 +48,7 @@ void Meeting::editTask(std::istream& input, std::ostream& output){
 	output << "\t4. Edit Start Time\n";
 	output << "\t5. Edit End Time\n";
 	output << "\t6. Edit Subtasks\n";
+	output << "\t7. Exit Edit Menu\n";
 
 	output << "Please enter a number corresponding to the attribute you would like to edit: ";
 	
@@ -50,20 +56,22 @@ void Meeting::editTask(std::istream& input, std::ostream& output){
 	try
 	{
 		string in;
+		string inputGetline;
 		input >> in;
 		int selection = stoi(in);
 
 		switch (selection){
 			case 1:
-				this->setTitleFromMenu(cin, cout);
+				this->setTitleFromMenu(input, output);
 				break;
 			case 2:
 				break;
 			case 3:
-				cout << "Input new location: ";
-				getline(cin, in);
-				//this->setLocation(in);
-				cout << "Saved...\n";
+				output << "Input new location: ";
+				//string* temp = new string;
+				getline(input, inputGetline);
+				this->setLocation(inputGetline);
+				output << "Saved...\n";
 				break;
 			case 4:
 				break;
@@ -71,6 +79,8 @@ void Meeting::editTask(std::istream& input, std::ostream& output){
 				break;
 			case 6:
 				//this->operateSubTaskMenu();
+				break;
+			case 7:
 				break;
 			default:
 				throw selection;

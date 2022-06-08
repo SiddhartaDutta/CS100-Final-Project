@@ -42,6 +42,16 @@ class Meeting : public ParentTask {
 	
 		}
 
+		~Meeting(){
+			delete eventDate;
+			delete startTime;
+			delete endTime;
+
+			for(int x = 0; x < subTasks.size(); x++){
+				delete subTasks.at(x);
+			}
+		}
+
 		/* MUTATORS */
 
 		/// Edits start time of task

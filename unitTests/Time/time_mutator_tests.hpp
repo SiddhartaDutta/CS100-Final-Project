@@ -15,6 +15,8 @@ TEST(TimeHourMutator, ExpectedInput){
 	EXPECT_EQ(test->getHour(), 1);
 	EXPECT_EQ(test->getMinute(), 0);
 
+        delete test;
+
 }
 
 TEST(TimeHourMutator, ZeroInput){
@@ -26,6 +28,8 @@ TEST(TimeHourMutator, ZeroInput){
         EXPECT_EQ(test->getHour(), 0);
         EXPECT_EQ(test->getMinute(), 0);
 
+        delete test;
+
 }
 
 TEST(TimeHourMutator, NegativeInput){
@@ -36,6 +40,8 @@ TEST(TimeHourMutator, NegativeInput){
 
         EXPECT_EQ(test->getHour(), -1);
         EXPECT_EQ(test->getMinute(), 0);
+
+        delete test;
 
 }
 
@@ -49,6 +55,8 @@ TEST(TimeMinuteMutator, ExpectedInput){
 	EXPECT_EQ(test->getHour(), 0);
 	EXPECT_EQ(test->getMinute(), 1);
 
+        delete test;
+
 }
 
 TEST(TimeMinuteMutator, ZeroInput){
@@ -60,6 +68,8 @@ TEST(TimeMinuteMutator, ZeroInput){
         EXPECT_EQ(test->getHour(), 0);
         EXPECT_EQ(test->getMinute(), 0);
 
+        delete test;
+
 }
 
 TEST(TimeMinuteMutator, NegativeInput){
@@ -70,6 +80,8 @@ TEST(TimeMinuteMutator, NegativeInput){
 
         EXPECT_EQ(test->getHour(), 0);
         EXPECT_EQ(test->getMinute(), -1);
+
+        delete test;
 
 }
 

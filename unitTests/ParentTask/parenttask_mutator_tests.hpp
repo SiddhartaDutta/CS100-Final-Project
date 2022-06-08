@@ -58,6 +58,8 @@ TEST(ParentTask_MenuMutator, ExpectedInput){
     string expectedString = "Sample Title - Event in 2 days.";
     EXPECT_EQ(test->getTitle(), expectedString);
 
+    delete test;
+
 }
 
 TEST(ParentTask_MenuMutator, NumericalInput){
@@ -75,6 +77,9 @@ TEST(ParentTask_MenuMutator, NumericalInput){
 
     string expectedString = "123456.789";
     EXPECT_EQ(test->getTitle(), expectedString);
+
+    delete test;
+
 }
 
 TEST(ParentTask_MenuMutator, EmptyInput){
@@ -92,6 +97,9 @@ TEST(ParentTask_MenuMutator, EmptyInput){
 
     string expectedString = "";
     EXPECT_EQ(test->getTitle(), expectedString);
+
+    delete test;
+    
 }
 
 #endif

@@ -11,6 +11,9 @@ TEST(Meeting_Location_Mutator, Expected_Input){
     test->setLocation("Test Location: 12345 Street Blvd, LA, CA 12345");
 
     EXPECT_EQ(test->getLocation(), "Test Location: 12345 Street Blvd, LA, CA 12345");
+
+    delete test;
+    
 }
 
 TEST(Meeting_Location_Mutator, EmptyInput){
@@ -21,6 +24,9 @@ TEST(Meeting_Location_Mutator, EmptyInput){
     test->setLocation("");
 
     EXPECT_EQ(test->getLocation(), "");
+
+    delete test;
+
 }
 
 #endif

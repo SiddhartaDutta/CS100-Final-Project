@@ -16,6 +16,8 @@ TEST(DateMonthMutator, ExpectedInput){
 	EXPECT_EQ(test->getDay(), 0);
 	EXPECT_EQ(test->getYear(), 0);
 
+        delete test;
+
 }
 
 TEST(DateMonthMutator, ZeroInput){
@@ -28,6 +30,8 @@ TEST(DateMonthMutator, ZeroInput){
 	EXPECT_EQ(test->getDay(), 0);
 	EXPECT_EQ(test->getYear(), 0);
 
+        delete test;
+
 }
 
 TEST(DateMonthMutator, NegativeInput){
@@ -39,6 +43,8 @@ TEST(DateMonthMutator, NegativeInput){
         EXPECT_EQ(test->getMonth(), -1);
         EXPECT_EQ(test->getDay(), 0);
         EXPECT_EQ(test->getYear(), 0);
+
+        delete test;
 }
 
 // DAY TESTS
@@ -52,6 +58,8 @@ TEST(DateDayMutator, ExpectedInput){
 	EXPECT_EQ(test->getDay(), 1);
 	EXPECT_EQ(test->getYear(), 0);
 
+        delete test;
+
 }
 
 TEST(DateDayMutator, ZeroInput){
@@ -64,6 +72,8 @@ TEST(DateDayMutator, ZeroInput){
         EXPECT_EQ(test->getDay(), 0);
         EXPECT_EQ(test->getYear(), 0);
 
+        delete test;
+
 }
 
 TEST(DateDayMutator, NegativeInput){
@@ -75,6 +85,8 @@ TEST(DateDayMutator, NegativeInput){
         EXPECT_EQ(test->getMonth(), 0);
         EXPECT_EQ(test->getDay(), -1);
         EXPECT_EQ(test->getYear(), 0);
+
+        delete test;
 
 }
 
@@ -89,6 +101,8 @@ TEST(DateYearMutator, ExpectedInput){
         EXPECT_EQ(test->getDay(), 0);
         EXPECT_EQ(test->getYear(), 1);
 
+        delete test;
+
 }
 
 TEST(DateYearMutator, ZeroInput){
@@ -101,6 +115,8 @@ TEST(DateYearMutator, ZeroInput){
         EXPECT_EQ(test->getDay(), 0);
         EXPECT_EQ(test->getYear(), 0);
 
+        delete test;
+
 }
 
 TEST(DateYearMutator, NegativeInput){
@@ -112,6 +128,8 @@ TEST(DateYearMutator, NegativeInput){
         EXPECT_EQ(test->getMonth(), 0);
         EXPECT_EQ(test->getDay(), 0);
         EXPECT_EQ(test->getYear(), -1);
+
+        delete test;
 
 }
 

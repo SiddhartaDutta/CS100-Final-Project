@@ -130,22 +130,65 @@ The following dropdown contains general descriptions of every method currently i
 </details> 
  
  ## Screenshots
- Currently, main project screenshots are unavailable since project still in development.
+<details><summary>Current Main Screenshots</summary>
+
+</br>
+
+Image of start menu:
+
+![Image of start menu.](./images/Screenshot_1545.png)
+
+Image of invalid input:
+
+![Image of invalid input.](./images/Screenshot_1548.png)
+
+Image of when task data is printed (specifically "Meeting" tasks in this example): 
+
+![Image of task data printed.](./images/Screenshot_1546.png)
+
+Image of when the edit menu is selected:
+
+![Image of edit menu.](./images/Screenshot_1547.png)
+
+Image of invalid input in edit menu:
+
+![Image of invalid input in edit menu.](./images/Screenshot_1549.png)
+
+Image of successful title change:
+
+![Image of successful title change.](./images/Screenshot_1550.png)
+
+Image of successful date change:
+
+![Image of successful date change.](./images/Screenshot_1551.png)
+
+Image of successful location change:
+
+![Image of successful location change.](./images/Screenshot_1552.png)
+
+Image of successful edit menu exit:
+
+![Image of successful exit.](./images/Screenshot_1553.png)
+
+Image of program exit:
+
+![Image of program exit.](./images/Screenshot_1554.png)
+
+
+</details>
 
 <details><summary>Unit Test Screenshots</summary>
 
- ![Image of top half of ./test run.](./images/Screenshot_1526.png)
+ ![Image of top third of ./test run.](./images/Screenshot_1542.png)
 
- ![Image of bottom half of ./test run.](./images/Screenshot_1525.png)
+ ![Image of middle third of ./test run.](./images/Screenshot_1543.png)
+
+ ![Image of bottom half of ./test run.](./images/Screenshot_1544.png)
 
 </details>
 
  ## Installation/Usage
- Since the project is still in development, installation is not currently an option. However, you can download the "test.exe" file which will run all current tests from here: [Google Drive to "test.exe"](https://drive.google.com/drive/folders/1P3eTyWPxXYc-eMa-bkTmEFtWDHt6gyM6?usp=sharing)
-
-</br>
-
- The "test.exe" file may not work. If that is the case, in an IDE/development environment with a C++ compiler and CMake*, please run the following commands:
+ In an IDE/development environment with a C++ compiler and CMake*, please run the following commands:
 
  **To clone the repository:**
 
@@ -173,6 +216,12 @@ The following dropdown contains general descriptions of every method currently i
 
  ```sh
  ./test
+ ```
+
+ **To run the "main.exe" file (main program):**
+
+ ```sh
+ ./main
  ```
 
  </br>

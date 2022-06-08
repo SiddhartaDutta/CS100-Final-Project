@@ -20,6 +20,8 @@ class Date {
 			this->year = year;
 		}
 
+		~Date(){}
+
 		// Accessors
 		int getMonth() const { return month; }
 

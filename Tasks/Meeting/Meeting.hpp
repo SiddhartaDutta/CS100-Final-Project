@@ -42,6 +42,12 @@ class Meeting : public ParentTask {
 	
 		}
 
+		~Meeting(){
+			eventDate->~Date();
+			startTime->~Time();
+			endTime->~Time();
+		}
+
 		/* MUTATORS */
 
 		/// Edits start time of task

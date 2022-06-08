@@ -15,6 +15,8 @@ class Time {
 			this->hour = hour;
 			this->minute = minute;
 		}
+
+		~Time(){}
 	
 		// Accessors
 		int getHour() const { return hour; }

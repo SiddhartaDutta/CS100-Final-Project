@@ -1,5 +1,7 @@
  # Task Manager
- Authors: [Siddharta Dutta](https://github.com/SiddhartaDutta), [Sarah Kim](https://github.com/sarahkimmieee), [Jacob Do](https://github.com/jacobcdo), [Shihwei Lin](https://github.com/slin182)
+ **Primary Authors: [Siddharta Dutta](https://github.com/SiddhartaDutta)**
+ 
+ Minor Contributors: [Sarah Kim](https://github.com/sarahkimmieee), [Jacob Do](https://github.com/jacobcdo), [Shihwei Lin](https://github.com/slin182)
 
 ## Project Description
   

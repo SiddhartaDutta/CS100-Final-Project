@@ -32,21 +32,24 @@ class Meeting : public ParentTask {
 			
 			this->title = title;
 			
-			eventDate = new Date();
-			eventDate->setMonth(month);
-			eventDate->setDay(day);
-			eventDate->setYear(year);
+			eventDate = new Date(month, day, year);
 
 			this->location = location;
 
-			startTime = new Time();
-			startTime->setHour(startTimeHour);
-			startTime->setMinute(startTimeMin);
+			startTime = new Time(startTimeHour, startTimeMin);
 
-			endTime = new Time();
-			endTime->setHour(endTimeHour);
-			endTime->setMinute(endTimeMin);
+			endTime = new Time(endTimeHour, endTimeMin);
 	
+		}
+
+		~Meeting(){
+			delete eventDate;
+			delete startTime;
+			delete endTime;
+
+			for(int x = 0; x < subTasks.size(); x++){
+				delete subTasks.at(x);
+			}
 		}
 
 		/* MUTATORS */
@@ -61,7 +64,7 @@ class Meeting : public ParentTask {
 		void setDate(int month, int day, int year);
 
 		/// Edits location of task
-		void setLocation(std::string location);
+		void setLocation(string location);
 
 		/// Runs menu to edit all attributes : follows pattern for universal object manip
 		void editTask(std::istream& input, std::ostream& output);

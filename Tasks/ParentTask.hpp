@@ -2,6 +2,7 @@
 #define __PARENT_TASK__
 
 #include <vector>
+#include <string>
 #include <iostream>
 
 class ParentTask {

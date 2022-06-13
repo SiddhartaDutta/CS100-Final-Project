@@ -1,7 +1,7 @@
 #include "ParentTask.hpp"
 
-#include <string>
-#include <iostream>
+// #include <string>
+// #include <iostream>
 
 using namespace std;
 
@@ -12,7 +12,10 @@ string ParentTask::getTitle(){ return title; }
 void ParentTask::setTitle(string title){ this->title = title; }
 
 void ParentTask::setTitleFromMenu(istream& input, ostream& output){
+    string temp;
     output << "Input new title: ";
-    getline(input, title);
-    output << "Saved...\n";
+    input.ignore();
+    getline(input, temp);
+    title = temp;
+    output << "Saved...\n\n";
 }

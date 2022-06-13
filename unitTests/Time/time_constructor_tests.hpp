@@ -12,6 +12,8 @@ TEST(TimeConstructor, DefaultConstructor){
 	EXPECT_EQ(test->getHour(), 0);
 	EXPECT_EQ(test->getMinute(), 0);
 
+	delete test;
+
 }
 
 TEST(TimeConstructor, HourParamOnly){
@@ -21,6 +23,8 @@ TEST(TimeConstructor, HourParamOnly){
 	EXPECT_EQ(test->getHour(), 1);
 	EXPECT_EQ(test->getMinute(), 0);
 
+	delete test;
+
 }
 
 TEST(TimeConstructor, AllParams){
@@ -29,6 +33,8 @@ TEST(TimeConstructor, AllParams){
 
 	EXPECT_EQ(test->getHour(), 1);
 	EXPECT_EQ(test->getMinute(), 1);
+
+	delete test;
 
 }
 

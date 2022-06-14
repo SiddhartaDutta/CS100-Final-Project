@@ -18,7 +18,13 @@ class GenericTask : public ParentTask{
         // Destructor
         ~GenericTask(){}
 
+        /* ACCESSORS */
         
+        /// Print all info
+        void printAllInfo();
+
+        /// Return desc
+        std::string getDescription() const;
 
 };
 

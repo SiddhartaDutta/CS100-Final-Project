@@ -8,6 +8,7 @@
 #include "unitTests/Meeting/meeting_mutator_tests.hpp"
 
 // GenericTask Class Unit Tests
+#include "unitTests/GenericTask/generictask_constructor_tests.hpp"
 
 // Homework Class Unit Tests
 

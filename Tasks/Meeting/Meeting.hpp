@@ -7,7 +7,7 @@
 #include "../../attributeClasses/Date.hpp"
 #include "../../attributeClasses/Time.hpp"
 
-using namespace std;
+//using namespace std;
 
 class Meeting : public ParentTask {
 
@@ -23,12 +23,12 @@ class Meeting : public ParentTask {
 		Time* endTime;
 
 		// Location of task
-		string location;
+		std::string location;
 
 	public:
 
 		// Constructor
-		Meeting(string title = "", int month = 0, int day = 0, int year = 0, string location = "", int startTimeHour = 0, int startTimeMin = 0, int endTimeHour = 0, int endTimeMin = 0) : ParentTask() {
+		Meeting(std::string title = "", int month = 0, int day = 0, int year = 0, std::string location = "", int startTimeHour = 0, int startTimeMin = 0, int endTimeHour = 0, int endTimeMin = 0) : ParentTask() {
 			
 			this->title = title;
 			
@@ -64,7 +64,7 @@ class Meeting : public ParentTask {
 		void setDate(int month, int day, int year);
 
 		/// Edits location of task
-		void setLocation(string location);
+		void setLocation(std::string location);
 
 		/// Runs menu to edit all attributes : follows pattern for universal object manip
 		void editTask(std::istream& input, std::ostream& output);
@@ -76,7 +76,7 @@ class Meeting : public ParentTask {
 		Time* getStartTime() const;
 		Time* getEndTime() const;
 		Date* getDate() const;
-		string getLocation() const;
+		std::string getLocation() const;
 
 };
 

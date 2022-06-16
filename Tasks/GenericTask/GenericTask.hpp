@@ -32,6 +32,9 @@ class GenericTask : public ParentTask{
         /// Runs menu to edit all attributes : follows pattern for universal object manip
 		void editTask(std::istream& input, std::ostream& output){};
 
+        /// Edits GenericTask object description
+        void setDescription(std::string newDesc);
+
 };
 
 #endif

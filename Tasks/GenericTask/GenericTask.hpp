@@ -22,7 +22,7 @@ class GenericTask : public ParentTask{
         /* ACCESSORS */
         
         /// Print all info
-        void printAllInfo();
+        void printAllInfo(){};
 
         /// Return desc
         std::string getDescription() const;
@@ -30,7 +30,7 @@ class GenericTask : public ParentTask{
         /* Mutators */
 
         /// Runs menu to edit all attributes : follows pattern for universal object manip
-		void editTask(std::istream& input, std::ostream& output);
+		void editTask(std::istream& input, std::ostream& output){};
 
 };
 

@@ -36,7 +36,7 @@ int main(){
 
 			switch(selection){
 				case 1:
-					mainTask->printAllInfo();
+					mainTask->printAllInfo(cout);
 					break;
 
 				case 2:

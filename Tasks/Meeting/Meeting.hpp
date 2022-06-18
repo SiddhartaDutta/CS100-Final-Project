@@ -71,7 +71,7 @@ class Meeting : public ParentTask {
 
 		/* ACCESSORS */
 
-		void printAllInfo();
+		void printAllInfo(std::ostream& output);
 		
 		Time* getStartTime() const;
 		Time* getEndTime() const;

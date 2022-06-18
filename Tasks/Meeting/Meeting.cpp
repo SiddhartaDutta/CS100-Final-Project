@@ -7,20 +7,20 @@ using namespace std;
 
 /* ACCESSORS */
 
-void Meeting::printAllInfo(){
-	cout << "Title: " << title << endl;
-	cout << "\tTask Type: Meeting\n";
+void Meeting::printAllInfo(ostream& output){
+	output << "Title: " << title << endl;
+	output << "\tTask Type: Meeting\n";
 
-	cout << "\tDate: ";
-	eventDate->print(cout);
+	output << "\tDate: ";
+	eventDate->print(output);
 
-	cout << "\tStart Time: ";
-	startTime->print(cout);
+	output << "\tStart Time: ";
+	startTime->print(output);
 
-	cout << "\tEnd Time: ";
-	startTime->print(cout);
+	output << "\tEnd Time: ";
+	startTime->print(output);
 
-	cout << "\tLocation: " << location << "\n\n";
+	output << "\tLocation: " << location << "\n\n";
 }
 
 Time* Meeting::getStartTime() const { return startTime; }
@@ -38,7 +38,7 @@ void Meeting::editTask(std::istream& input, std::ostream& output){
 	output << "--- Selected Task ---\n";
 
 	// Print task
-	this->printAllInfo();
+	this->printAllInfo(cout);
 
 	//output << "\n";
 

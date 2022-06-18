@@ -22,7 +22,7 @@ class ParentTask {
 		virtual ~ParentTask(){}
 
 		// Pure Virtual Functions
-		virtual void printAllInfo() = 0;
+		virtual void printAllInfo(std::ostream& output) = 0;
 		virtual void editTask(std::istream& input, std::ostream& output) = 0;
 	
 		// Mutators

@@ -5,7 +5,7 @@
 
 #include "../../Tasks/Meeting/Meeting.hpp"
 
-TEST(MeetingConstructor, ExpectedInputs){
+TEST(Meeting_Constructor, Expected_Inputs){
 
 	Meeting* test = new Meeting("New Meeting", 5, 22, 2022, "UCR", 9, 20, 11, 59);
 
@@ -40,7 +40,7 @@ TEST(MeetingConstructor, ExpectedInputs){
 
 }
 
-TEST(MeetingConstructor, EmptyConstructor){
+TEST(Meeting_Constructor, Default_Constructor){
 	
 	Meeting* test = new Meeting();
 
@@ -75,7 +75,7 @@ TEST(MeetingConstructor, EmptyConstructor){
 	
 }
 
-TEST(MeetingConstructor, UnexpectedInputs){
+TEST(Meeting_Constructor, Unexpected_Inputs){
 
 	Meeting* test = new Meeting("123", 0, -10, -10, "123", 100, -10, -10, 100);
 

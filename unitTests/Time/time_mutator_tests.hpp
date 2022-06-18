@@ -6,7 +6,7 @@
 #include "../../attributeClasses/Time.hpp"
 
 // HOUR TESTS
-TEST(TimeHourMutator, ExpectedInput){
+TEST(Time_Hour_Mutator, Expected_Input){
 
 	Time* test = new Time();
 
@@ -19,7 +19,7 @@ TEST(TimeHourMutator, ExpectedInput){
 
 }
 
-TEST(TimeHourMutator, ZeroInput){
+TEST(Time_Hour_Mutator, Zero_Input){
 
         Time* test = new Time(1);
 
@@ -32,7 +32,7 @@ TEST(TimeHourMutator, ZeroInput){
 
 }
 
-TEST(TimeHourMutator, NegativeInput){
+TEST(Time_Hour_Mutator, Negative_Input){
 
         Time* test = new Time();
 
@@ -46,7 +46,7 @@ TEST(TimeHourMutator, NegativeInput){
 }
 
 // MINUTE TESTS
-TEST(TimeMinuteMutator, ExpectedInput){
+TEST(Time_Minute_Mutator, Expected_Input){
 
 	Time* test = new Time();
 
@@ -59,7 +59,7 @@ TEST(TimeMinuteMutator, ExpectedInput){
 
 }
 
-TEST(TimeMinuteMutator, ZeroInput){
+TEST(Time_Minute_Mutator, Zero_Input){
 
         Time* test = new Time(0, 1);
 
@@ -72,7 +72,7 @@ TEST(TimeMinuteMutator, ZeroInput){
 
 }
 
-TEST(TimeMinuteMutator, NegativeInput){
+TEST(Time_Minute_Mutator, Negative_Input){
 
         Time* test = new Time();
 

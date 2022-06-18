@@ -5,7 +5,7 @@
 
 #include "../../attributeClasses/Date.hpp"
 
-TEST(DateConstructor, DefaultConstructor){
+TEST(Date_Constructor, Default_Constructor){
 
 	Date* test = new Date();
 
@@ -17,7 +17,7 @@ TEST(DateConstructor, DefaultConstructor){
 
 }
 
-TEST(DateConstructor, MonthParamOnly){
+TEST(Date_Constructor, Month_Param_Only){
 
 	Date* test = new Date(1);
 
@@ -29,7 +29,7 @@ TEST(DateConstructor, MonthParamOnly){
 
 }
 
-TEST(DateConstructor, MonthAndDayParamOnly){
+TEST(Date_Constructor, Month_And_Day_Param_Only){
 
 	Date* test = new Date(1, 31);
 	
@@ -41,7 +41,7 @@ TEST(DateConstructor, MonthAndDayParamOnly){
 
 }
 
-TEST(DateConstructor, AllParams){
+TEST(Date_Constructor, All_Params){
 
 	Date* test = new Date(1, 31, 2022);
 

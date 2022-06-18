@@ -16,7 +16,7 @@ TEST(Meeting_Location_Mutator, Expected_Input){
     
 }
 
-TEST(Meeting_Location_Mutator, EmptyInput){
+TEST(Meeting_Location_Mutator, Empty_Input){
     Meeting* test = new Meeting("New Meeting", 5, 22, 2022, "UCR", 9, 20, 11, 59);
 
     EXPECT_EQ(test->getLocation(), "UCR");

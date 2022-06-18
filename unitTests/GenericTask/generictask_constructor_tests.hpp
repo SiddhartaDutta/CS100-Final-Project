@@ -5,7 +5,7 @@
 
 #include "../../Tasks/GenericTask/GenericTask.hpp"
 
-TEST(GenericTask_Constructor, ExpectedInputs){
+TEST(GenericTask_Constructor, Expected_Inputs){
 
     GenericTask* test = new GenericTask("Test title", "Test Desc. of task @ 123");
 
@@ -19,7 +19,7 @@ TEST(GenericTask_Constructor, ExpectedInputs){
 
 }
 
-TEST(GenericTask_Constructor, EmptyDesc){
+TEST(GenericTask_Constructor, Empty_Desc){
     
     GenericTask* test = new GenericTask("Test title");
 
@@ -33,7 +33,7 @@ TEST(GenericTask_Constructor, EmptyDesc){
 
 }
 
-TEST(GenericTask_Constructor, EmptyConstructor){
+TEST(GenericTask_Constructor, Default_Constructor){
 
     GenericTask* test = new GenericTask();
 
@@ -47,7 +47,7 @@ TEST(GenericTask_Constructor, EmptyConstructor){
 
 }
 
-TEST(GenericTask_Constructor, UnexpectedInputs){
+TEST(GenericTask_Constructor, Unexpected_Inputs){
 
     GenericTask* test = new GenericTask("!2#$%^&*()_+-=/~`?<>,.", "!2#$%^&*()_+-=/~`?<>,.");
 

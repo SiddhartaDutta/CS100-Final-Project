@@ -10,7 +10,7 @@
 #include "../../Tasks/Meeting/Meeting.hpp"
 
 // Standard Mutator - No Menu
-TEST(ParentTask_NoMenuMutator, ExpectedInput){
+TEST(ParentTask_NoMenuMutator, Expected_Input){
     
     ParentTask* test = new Meeting();
     std::string expectedString = "Sample Title - Event in 2 days.";
@@ -21,7 +21,7 @@ TEST(ParentTask_NoMenuMutator, ExpectedInput){
 
 }
 
-TEST(ParentTask_NoMenuMutator, NumericalInput){
+TEST(ParentTask_NoMenuMutator, Numerical_Input){
 
     ParentTask* test = new Meeting();
     std::string expectedString = "123456.789";
@@ -31,7 +31,7 @@ TEST(ParentTask_NoMenuMutator, NumericalInput){
     EXPECT_EQ(test->getTitle(), expectedString);
 }
 
-TEST(ParentTask_NoMenuMutator, EmptyInput){
+TEST(ParentTask_NoMenuMutator, Empty_Input){
 
     ParentTask* test = new Meeting("Test Title");
 
@@ -42,7 +42,7 @@ TEST(ParentTask_NoMenuMutator, EmptyInput){
 }
 
 // Non-Standard Mutator - With Menu
-TEST(ParentTask_MenuMutator, ExpectedInput){
+TEST(ParentTask_MenuMutator, Expected_Input){
 
     std::istringstream input;
     std::ostringstream output;
@@ -62,7 +62,7 @@ TEST(ParentTask_MenuMutator, ExpectedInput){
 
 }
 
-TEST(ParentTask_MenuMutator, NumericalInput){
+TEST(ParentTask_MenuMutator, Numerical_Input){
 
     std::istringstream input;
     std::ostringstream output;
@@ -82,7 +82,7 @@ TEST(ParentTask_MenuMutator, NumericalInput){
 
 }
 
-TEST(ParentTask_MenuMutator, EmptyInput){
+TEST(ParentTask_MenuMutator, Empty_Input){
     
     std::istringstream input;
     std::ostringstream output;

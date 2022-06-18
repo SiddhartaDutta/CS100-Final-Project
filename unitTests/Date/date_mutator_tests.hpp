@@ -6,7 +6,7 @@
 #include "../../attributeClasses/Date.hpp"
 
 // MONTH TESTS
-TEST(DateMonthMutator, ExpectedInput){
+TEST(Date_Month_Mutator, Expected_Input){
 
 	Date* test = new Date();
 
@@ -20,7 +20,7 @@ TEST(DateMonthMutator, ExpectedInput){
 
 }
 
-TEST(DateMonthMutator, ZeroInput){
+TEST(Date_Month_Mutator, Zero_Input){
 
 	Date* test = new Date(1);
 
@@ -34,7 +34,7 @@ TEST(DateMonthMutator, ZeroInput){
 
 }
 
-TEST(DateMonthMutator, NegativeInput){
+TEST(Date_Month_Mutator, Negative_Input){
 
 	Date* test = new Date();
 
@@ -48,7 +48,7 @@ TEST(DateMonthMutator, NegativeInput){
 }
 
 // DAY TESTS
-TEST(DateDayMutator, ExpectedInput){
+TEST(Date_Day_Mutator, Expected_Input){
 	
 	Date* test = new Date();
 
@@ -62,7 +62,7 @@ TEST(DateDayMutator, ExpectedInput){
 
 }
 
-TEST(DateDayMutator, ZeroInput){
+TEST(Date_Day_Mutator, Zero_Input){
 
         Date* test = new Date(0, 1);
 
@@ -76,7 +76,7 @@ TEST(DateDayMutator, ZeroInput){
 
 }
 
-TEST(DateDayMutator, NegativeInput){
+TEST(Date_Day_Mutator, Negative_Input){
 
         Date* test = new Date();
 
@@ -91,7 +91,7 @@ TEST(DateDayMutator, NegativeInput){
 }
 
 // YEAR TESTS
-TEST(DateYearMutator, ExpectedInput){
+TEST(Date_Year_Mutator, Expected_Input){
 
         Date* test = new Date();
 
@@ -105,7 +105,7 @@ TEST(DateYearMutator, ExpectedInput){
 
 }
 
-TEST(DateYearMutator, ZeroInput){
+TEST(Date_Year_Mutator, Zero_Input){
 
         Date* test = new Date(0, 0, 1);
 
@@ -119,7 +119,7 @@ TEST(DateYearMutator, ZeroInput){
 
 }
 
-TEST(DateYearMutator, NegativeInput){
+TEST(Date_Year_Mutator, Negative_Input){
 
         Date* test = new Date();
 

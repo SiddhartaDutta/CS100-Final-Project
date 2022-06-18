@@ -5,7 +5,7 @@
 
 #include "../../Tasks/GenericTask/GenericTask.hpp"
 
-TEST(GenericTask_Description_Mutator, ExpectedInput){
+TEST(GenericTask_Description_Mutator, Expected_Input){
 
     GenericTask* test = new GenericTask("Test title", "Test Desc. of task @ 123");
 
@@ -15,7 +15,7 @@ TEST(GenericTask_Description_Mutator, ExpectedInput){
 
 }
 
-TEST(GenericTask_Description_Mutator, EmptyInput){
+TEST(GenericTask_Description_Mutator, Empty_Input){
 
     GenericTask* test = new GenericTask("Test title", "Test Desc. of task @ 123");
 
@@ -25,7 +25,7 @@ TEST(GenericTask_Description_Mutator, EmptyInput){
 
 }
 
-TEST(GenericTask_Description_Mutator, UnexpectedInput){
+TEST(GenericTask_Description_Mutator, Unexpected_Input){
 
     GenericTask* test = new GenericTask("Test title", "Test Desc. of task @ 123");
 

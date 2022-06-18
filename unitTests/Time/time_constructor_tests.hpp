@@ -5,7 +5,7 @@
 
 #include "../../attributeClasses/Time.hpp"
 
-TEST(TimeConstructor, DefaultConstructor){
+TEST(Time_Constructor, Default_Constructor){
 	
 	Time* test = new Time();
 
@@ -16,7 +16,7 @@ TEST(TimeConstructor, DefaultConstructor){
 
 }
 
-TEST(TimeConstructor, HourParamOnly){
+TEST(Time_Constructor, Hour_Param_Only){
 
 	Time* test = new Time(1);
 
@@ -27,7 +27,7 @@ TEST(TimeConstructor, HourParamOnly){
 
 }
 
-TEST(TimeConstructor, AllParams){
+TEST(Time_Constructor, All_Params){
 
 	Time* test = new Time(1, 1);
 

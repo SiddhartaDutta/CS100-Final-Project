@@ -22,7 +22,7 @@ class GenericTask : public ParentTask{
         /* ACCESSORS */
         
         /// Print all info
-        void printAllInfo(std::ostream& output){};
+        void printAllInfo(std::ostream& output);
 
         /// Return desc
         std::string getDescription() const;

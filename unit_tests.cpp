@@ -6,10 +6,12 @@
 // Meeting Class Unit Tests
 #include "unitTests/Meeting/meeting_construct.hpp"
 #include "unitTests/Meeting/meeting_mutator_tests.hpp"
+#include "unitTests/Meeting/meeting_printallinfo_tests.hpp"
 
 // GenericTask Class Unit Tests
 #include "unitTests/GenericTask/generictask_constructor_tests.hpp"
 #include "unitTests/GenericTask/generictask_mutator_tests.hpp"
+#include "unitTests/GenericTask/generictask_printallinfo_tests.hpp"
 
 // Homework Class Unit Tests
 

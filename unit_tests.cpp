@@ -9,6 +9,7 @@
 
 // GenericTask Class Unit Tests
 #include "unitTests/GenericTask/generictask_constructor_tests.hpp"
+#include "unitTests/GenericTask/generictask_mutator_tests.hpp"
 
 // Homework Class Unit Tests
 
